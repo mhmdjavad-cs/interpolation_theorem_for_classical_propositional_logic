@@ -1,0 +1,127 @@
+DIGEST d800c190d9ea5ab78c04bd4357fe79ec
+Fpropositional_symbols
+R27:30 stdpp.gmap <> <> lib
+R59:62 stdpp.base <> <> lib
+R91:99 stdpp.countable <> <> lib
+R101:107 stdpp.strings <> <> lib
+R126:133 formulas <> <> lib
+R151:160 evaluation <> <> lib
+R178:189 substitution <> <> lib
+def 203:221 <> proposition_symbols
+R228:238 formulas <> proposition ind
+binder 224:224 <> p:1
+R243:246 stdpp.gmap <> gset def
+R248:250 Corelib.Init.Datatypes <> nat ind
+R263:263 propositional_symbols <> p:1 var
+R274:276 formulas <> Bot constr
+R281:283 stdpp.base <> ::stdpp_scope:'∅' not
+R289:292 formulas <> Atom constr
+R299:300 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R302:303 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R309:311 formulas <> And constr
+R322:322 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R345:351 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R374:374 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R323:341 propositional_symbols <> proposition_symbols:2 def
+R352:370 propositional_symbols <> proposition_symbols:2 def
+R380:381 formulas <> Or constr
+R392:392 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R415:421 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R444:444 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R393:411 propositional_symbols <> proposition_symbols:2 def
+R422:440 propositional_symbols <> proposition_symbols:2 def
+R450:452 formulas <> Imp constr
+R463:463 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R486:492 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R515:515 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R464:482 propositional_symbols <> proposition_symbols:2 def
+R493:511 propositional_symbols <> proposition_symbols:2 def
+R521:523 formulas <> Neg constr
+R532:550 propositional_symbols <> proposition_symbols:2 def
+R590:608 propositional_symbols <> proposition_symbols def
+not 574:574 <> :::'ps('_x_')'
+def 658:660 <> ps1
+R689:691 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R664:666 propositional_symbols <> :::'ps('_x_')' not
+R688:688 propositional_symbols <> :::'ps('_x_')' not
+R667:669 formulas <> And constr
+R672:675 formulas <> Atom constr
+R681:684 formulas <> Atom constr
+R692:693 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R695:695 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R697:698 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+prf 741:768 <> only_atoms_in_formula_matter
+R774:781 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R816:822 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R786:796 formulas <> proposition ind
+binder 782:782 <> p:4
+R808:815 evaluation <> eval_fun def
+binder 800:801 <> e1:5
+R808:815 evaluation <> eval_fun def
+binder 803:804 <> e2:6
+R823:823 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R865:869 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R824:830 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R836:838 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R833:835 Corelib.Init.Datatypes <> nat ind
+binder 831:831 <> x:7
+R850:853 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R840:844 stdpp.base <> ::stdpp_scope:x_'∈'_x not
+R839:839 propositional_symbols <> x:7 var
+R845:847 propositional_symbols <> :::'ps('_x_')' not
+R849:849 propositional_symbols <> :::'ps('_x_')' not
+R848:848 propositional_symbols <> p:4 var
+R858:860 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R854:855 propositional_symbols <> e1:5 var
+R857:857 propositional_symbols <> x:7 var
+R861:862 propositional_symbols <> e2:6 var
+R864:864 propositional_symbols <> x:7 var
+R884:886 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R870:878 evaluation <> interpret def
+R880:881 propositional_symbols <> e1:5 var
+R883:883 propositional_symbols <> p:4 var
+R887:895 evaluation <> interpret def
+R897:898 propositional_symbols <> e2:6 var
+R900:900 propositional_symbols <> p:4 var
+R1062:1064 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1047:1055 evaluation <> interpret def
+R1065:1073 evaluation <> interpret def
+R1062:1064 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1047:1055 evaluation <> interpret def
+R1065:1073 evaluation <> interpret def
+R1184:1186 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1169:1177 evaluation <> interpret def
+R1187:1195 evaluation <> interpret def
+R1184:1186 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1169:1177 evaluation <> interpret def
+R1187:1195 evaluation <> interpret def
+R1363:1365 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1348:1356 evaluation <> interpret def
+R1366:1374 evaluation <> interpret def
+R1363:1365 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1348:1356 evaluation <> interpret def
+R1366:1374 evaluation <> interpret def
+R1485:1487 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1470:1478 evaluation <> interpret def
+R1488:1496 evaluation <> interpret def
+R1485:1487 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1470:1478 evaluation <> interpret def
+R1488:1496 evaluation <> interpret def
+R1664:1666 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1649:1657 evaluation <> interpret def
+R1667:1675 evaluation <> interpret def
+R1664:1666 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1649:1657 evaluation <> interpret def
+R1667:1675 evaluation <> interpret def
+R1786:1788 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1771:1779 evaluation <> interpret def
+R1789:1797 evaluation <> interpret def
+R1786:1788 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1771:1779 evaluation <> interpret def
+R1789:1797 evaluation <> interpret def
+R1964:1966 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1950:1958 evaluation <> interpret def
+R1967:1975 evaluation <> interpret def
+R1964:1966 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1950:1958 evaluation <> interpret def
+R1967:1975 evaluation <> interpret def

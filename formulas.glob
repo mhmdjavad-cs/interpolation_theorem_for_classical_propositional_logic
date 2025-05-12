@@ -1,0 +1,244 @@
+DIGEST bac522259242f487ff32dc46e86cdd24
+Fformulas
+R26:29 stdpp.gmap <> <> lib
+R58:61 stdpp.base <> <> lib
+R90:98 stdpp.countable <> <> lib
+R100:106 stdpp.strings <> <> lib
+ind 121:131 <> proposition
+constr 147:149 <> Bot
+constr 155:158 <> Atom
+constr 175:177 <> And
+constr 207:208 <> Or
+constr 239:241 <> Imp
+constr 271:273 <> Neg
+R166:168 Corelib.Init.Datatypes <> nat ind
+binder 162:162 <> n:3
+R190:200 formulas <> proposition:1 ind
+binder 182:183 <> p1:4
+binder 185:186 <> p2:5
+R222:232 formulas <> proposition:1 ind
+binder 214:215 <> p1:6
+binder 217:218 <> p2:7
+R254:264 formulas <> proposition:1 ind
+binder 246:247 <> p1:8
+binder 249:250 <> p2:9
+R283:293 formulas <> proposition:1 ind
+binder 278:279 <> p1:10
+scheme 121:131 <> proposition_rect
+scheme 121:131 <> proposition_ind
+scheme 121:131 <> proposition_rec
+scheme 121:131 <> proposition_sind
+R304:306 formulas <> Bot constr
+def 320:324 <> level
+R331:341 formulas <> proposition ind
+binder 327:327 <> p:11
+R346:348 Corelib.Init.Datatypes <> nat ind
+R361:361 formulas <> p:11 var
+R372:374 formulas <> Bot constr
+R385:388 formulas <> Atom constr
+R401:403 formulas <> And constr
+R417:417 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R426:432 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R441:441 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R418:422 formulas <> level:12 def
+R433:437 formulas <> level:12 def
+R470:470 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R479:482 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R471:475 formulas <> level:12 def
+R450:450 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R459:462 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R451:455 formulas <> level:12 def
+R489:490 formulas <> Or constr
+R504:504 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R513:519 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R528:528 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R505:509 formulas <> level:12 def
+R520:524 formulas <> level:12 def
+R557:557 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R566:569 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R558:562 formulas <> level:12 def
+R537:537 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R546:549 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R538:542 formulas <> level:12 def
+R576:578 formulas <> Imp constr
+R592:592 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R601:607 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R616:616 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'<=?'_x not
+R593:597 formulas <> level:12 def
+R608:612 formulas <> level:12 def
+R645:645 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R654:657 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R646:650 formulas <> level:12 def
+R625:625 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R634:637 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R626:630 formulas <> level:12 def
+R664:666 formulas <> Neg constr
+R674:674 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R683:686 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R675:679 formulas <> level:12 def
+prf 706:723 <> induction_on_level
+R741:744 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R730:740 formulas <> proposition ind
+binder 726:726 <> q:14
+R755:756 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R847:853 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R882:882 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R757:764 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R780:783 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R769:779 formulas <> proposition ind
+binder 765:765 <> A:15
+R784:784 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R837:842 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R846:846 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R785:791 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R807:808 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R796:806 formulas <> proposition ind
+binder 792:792 <> B:16
+R809:809 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R827:832 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R836:836 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R817:819 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R810:814 formulas <> level def
+R816:816 formulas <> B:16 var
+R820:824 formulas <> level def
+R826:826 formulas <> A:15 var
+R833:833 formulas <> q:14 var
+R835:835 formulas <> B:16 var
+R843:843 formulas <> q:14 var
+R845:845 formulas <> A:15 var
+R854:860 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R876:878 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R865:875 formulas <> proposition ind
+binder 861:861 <> C:17
+R879:879 formulas <> q:14 var
+R881:881 formulas <> C:17 var
+R910:913 stdpp.gmap <> gset def
+R923:926 stdpp.gmap <> gset def
+R928:938 formulas <> proposition ind
+R950:959 stdpp.base <> EqDecision abbrev
+R961:971 formulas <> proposition ind
+inst 1075:1092 <> proposition_eq_dec
+R1096:1105 stdpp.base <> EqDecision abbrev
+R1107:1117 formulas <> proposition ind
+R1134:1143 stdpp.base <> RelDecision class
+R1153:1160 stdpp.base <> Decision class
+R1230:1232 Corelib.Init.Logic <> not def
+R1273:1275 Corelib.Init.Logic <> not def
+R1316:1318 Corelib.Init.Logic <> not def
+R1359:1361 Corelib.Init.Logic <> not def
+R1402:1404 Corelib.Init.Logic <> not def
+R1458:1460 Corelib.Init.Logic <> not def
+R1498:1501 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+R1498:1501 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+R1527:1536 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+R1527:1536 Stdlib.Arith.PeanoNat Nat eqb_eq thm
+R1589:1599 Stdlib.Arith.PeanoNat Nat eqb_neq thm
+R1589:1599 Stdlib.Arith.PeanoNat Nat eqb_neq thm
+R1615:1617 Corelib.Init.Logic <> not def
+R1640:1642 Corelib.Init.Logic <> not def
+R1715:1717 Corelib.Init.Logic <> not def
+R1758:1760 Corelib.Init.Logic <> not def
+R1801:1803 Corelib.Init.Logic <> not def
+R1844:1846 Corelib.Init.Logic <> not def
+R1900:1902 Corelib.Init.Logic <> not def
+R1943:1945 Corelib.Init.Logic <> not def
+R2150:2152 Corelib.Init.Logic <> not def
+R2238:2240 Corelib.Init.Logic <> not def
+R2304:2306 Corelib.Init.Logic <> not def
+R2366:2368 Corelib.Init.Logic <> not def
+R2409:2411 Corelib.Init.Logic <> not def
+R2452:2454 Corelib.Init.Logic <> not def
+R2508:2510 Corelib.Init.Logic <> not def
+R2551:2553 Corelib.Init.Logic <> not def
+R2594:2596 Corelib.Init.Logic <> not def
+R2801:2803 Corelib.Init.Logic <> not def
+R2889:2891 Corelib.Init.Logic <> not def
+R2955:2957 Corelib.Init.Logic <> not def
+R3017:3019 Corelib.Init.Logic <> not def
+R3060:3062 Corelib.Init.Logic <> not def
+R3116:3118 Corelib.Init.Logic <> not def
+R3159:3161 Corelib.Init.Logic <> not def
+R3202:3204 Corelib.Init.Logic <> not def
+R3245:3247 Corelib.Init.Logic <> not def
+R3452:3454 Corelib.Init.Logic <> not def
+R3540:3542 Corelib.Init.Logic <> not def
+R3606:3608 Corelib.Init.Logic <> not def
+R3668:3670 Corelib.Init.Logic <> not def
+R3724:3726 Corelib.Init.Logic <> not def
+R3767:3769 Corelib.Init.Logic <> not def
+R3810:3812 Corelib.Init.Logic <> not def
+R3853:3855 Corelib.Init.Logic <> not def
+R3896:3898 Corelib.Init.Logic <> not def
+R4031:4033 Corelib.Init.Logic <> not def
+inst 4103:4119 <> proposition_count
+R4123:4131 stdpp.countable <> Countable class
+R4133:4143 formulas <> proposition ind
+def 4175:4188 <> sub_expression
+R4195:4205 formulas <> proposition ind
+binder 4191:4191 <> p:18
+R4210:4213 stdpp.gmap <> gset def
+R4215:4225 formulas <> proposition ind
+R4238:4238 formulas <> p:18 var
+R4249:4251 formulas <> Bot constr
+R4256:4257 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4261:4262 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4258:4260 formulas <> Bot constr
+R4268:4271 formulas <> Atom constr
+R4278:4279 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4286:4287 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4280:4283 formulas <> Atom constr
+R4293:4295 formulas <> And constr
+R4349:4353 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4306:4306 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4324:4330 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4348:4348 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4307:4320 formulas <> sub_expression:19 def
+R4331:4344 formulas <> sub_expression:19 def
+R4354:4355 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4365:4366 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4356:4358 formulas <> And constr
+R4372:4373 formulas <> Or constr
+R4427:4431 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4384:4384 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4402:4408 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4426:4426 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4385:4398 formulas <> sub_expression:19 def
+R4409:4422 formulas <> sub_expression:19 def
+R4432:4433 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4442:4443 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4434:4435 formulas <> Or constr
+R4449:4451 formulas <> Imp constr
+R4505:4509 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4462:4462 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4480:4486 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4504:4504 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4463:4476 formulas <> sub_expression:19 def
+R4487:4500 formulas <> sub_expression:19 def
+R4510:4511 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4521:4522 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4512:4514 formulas <> Imp constr
+R4528:4530 formulas <> Neg constr
+R4538:4538 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4556:4561 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4539:4552 formulas <> sub_expression:19 def
+R4562:4563 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4570:4571 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4564:4566 formulas <> Neg constr
+def 4589:4610 <> sub_expression_example
+R4614:4614 stdpp.base <> ::stdpp_scope:x_'∈'_x not
+R4621:4627 stdpp.base <> ::stdpp_scope:x_'∈'_x not
+R4672:4673 stdpp.base <> ::stdpp_scope:x_'∈'_x not
+R4615:4618 formulas <> Atom constr
+R4628:4641 formulas <> sub_expression def
+R4644:4646 formulas <> And constr
+R4649:4651 formulas <> Neg constr
+R4654:4657 formulas <> Atom constr
+R4664:4667 formulas <> Atom constr
+R4696:4708 stdpp.base <> elem_of_union meth
+R4696:4708 stdpp.base <> elem_of_union meth
+R4723:4735 stdpp.base <> elem_of_union meth
+R4723:4735 stdpp.base <> elem_of_union meth
+R4750:4762 stdpp.base <> elem_of_union meth
+R4750:4762 stdpp.base <> elem_of_union meth
+R4777:4793 stdpp.base <> elem_of_singleton meth
+R4777:4793 stdpp.base <> elem_of_singleton meth

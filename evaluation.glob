@@ -1,0 +1,380 @@
+DIGEST 7a2d8849f25992e18b0607ae7678db7e
+Fevaluation
+R27:30 stdpp.gmap <> <> lib
+R59:62 stdpp.base <> <> lib
+R91:99 stdpp.countable <> <> lib
+R101:107 stdpp.strings <> <> lib
+R126:133 formulas <> <> lib
+def 332:339 <> eval_fun
+R347:350 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R344:346 Corelib.Init.Datatypes <> nat ind
+R351:354 Corelib.Init.Datatypes <> bool ind
+def 368:373 <> myeval
+R377:384 evaluation <> eval_fun def
+R398:400 Corelib.Init.Datatypes <> nat ind
+binder 394:394 <> x:1
+R405:408 Corelib.Init.Datatypes <> true constr
+def 423:427 <> implb
+R438:441 Corelib.Init.Datatypes <> bool ind
+binder 430:431 <> b1:2
+binder 433:434 <> b2:3
+R446:449 Corelib.Init.Datatypes <> bool ind
+R459:460 evaluation <> b1:2 var
+R475:478 Corelib.Init.Datatypes <> true constr
+R467:468 evaluation <> b2:3 var
+def 491:499 <> interpret
+R511:515 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R535:535 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R503:510 evaluation <> eval_fun def
+R527:530 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R516:526 formulas <> proposition ind
+R531:534 Corelib.Init.Datatypes <> bool ind
+binder 546:546 <> e:5
+binder 548:548 <> p:6
+R559:559 evaluation <> p:6 var
+R570:572 formulas <> Bot constr
+R577:581 Corelib.Init.Datatypes <> false constr
+R587:590 formulas <> Atom constr
+R597:597 evaluation <> e:5 var
+R605:607 formulas <> And constr
+R618:621 Corelib.Init.Datatypes <> andb def
+R641:649 evaluation <> interpret:4 def
+R651:651 evaluation <> e:5 var
+R624:632 evaluation <> interpret:4 def
+R634:634 evaluation <> e:5 var
+R661:662 formulas <> Or constr
+R673:675 Corelib.Init.Datatypes <> orb def
+R695:703 evaluation <> interpret:4 def
+R705:705 evaluation <> e:5 var
+R678:686 evaluation <> interpret:4 def
+R688:688 evaluation <> e:5 var
+R715:717 formulas <> Imp constr
+R728:732 evaluation <> implb def
+R735:743 evaluation <> interpret:4 def
+R745:745 evaluation <> e:5 var
+R752:760 evaluation <> interpret:4 def
+R762:762 evaluation <> e:5 var
+R772:774 formulas <> Neg constr
+R782:785 Corelib.Init.Datatypes <> negb def
+R788:796 evaluation <> interpret:4 def
+R798:798 evaluation <> e:5 var
+prf 819:838 <> either_true_or_false
+R845:852 evaluation <> eval_fun def
+binder 841:841 <> I:8
+R860:870 formulas <> proposition ind
+binder 856:856 <> p:9
+R877:877 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R900:904 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R928:928 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R878:878 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R892:895 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R879:887 evaluation <> interpret def
+R889:889 evaluation <> I:8 var
+R891:891 evaluation <> p:9 var
+R896:899 Corelib.Init.Datatypes <> true constr
+R905:905 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R919:922 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R906:914 evaluation <> interpret def
+R916:916 evaluation <> I:8 var
+R918:918 evaluation <> p:9 var
+R923:927 Corelib.Init.Datatypes <> false constr
+R948:956 evaluation <> interpret def
+R948:956 evaluation <> interpret def
+prf 1017:1029 <> interpret_and
+R1036:1043 evaluation <> eval_fun def
+binder 1032:1032 <> I:10
+R1055:1065 formulas <> proposition ind
+binder 1047:1048 <> p1:11
+binder 1050:1051 <> p2:12
+R1101:1105 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R1094:1096 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1071:1079 evaluation <> interpret def
+R1081:1081 evaluation <> I:10 var
+R1084:1086 formulas <> And constr
+R1088:1089 evaluation <> p1:11 var
+R1091:1092 evaluation <> p2:12 var
+R1097:1100 Corelib.Init.Datatypes <> true constr
+R1106:1106 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1121:1127 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1142:1142 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1107:1115 evaluation <> interpret def
+R1117:1117 evaluation <> I:10 var
+R1119:1120 evaluation <> p1:11 var
+R1128:1136 evaluation <> interpret def
+R1138:1138 evaluation <> I:10 var
+R1140:1141 evaluation <> p2:12 var
+prf 1172:1188 <> only_atoms_matter
+R1192:1198 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1212:1213 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1201:1211 formulas <> proposition ind
+binder 1199:1199 <> p:13
+R1214:1220 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1235:1236 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1227:1234 evaluation <> eval_fun def
+binder 1221:1222 <> e1:14
+R1227:1234 evaluation <> eval_fun def
+binder 1224:1225 <> e2:15
+R1237:1237 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1266:1270 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1238:1244 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1252:1254 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1249:1251 Corelib.Init.Datatypes <> nat ind
+binder 1245:1245 <> n:16
+R1259:1261 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1255:1256 evaluation <> e1:14 var
+R1258:1258 evaluation <> n:16 var
+R1262:1263 evaluation <> e2:15 var
+R1265:1265 evaluation <> n:16 var
+R1285:1287 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1271:1279 evaluation <> interpret def
+R1281:1282 evaluation <> e1:14 var
+R1284:1284 evaluation <> p:13 var
+R1288:1296 evaluation <> interpret def
+R1298:1299 evaluation <> e2:15 var
+R1301:1301 evaluation <> p:13 var
+def 1562:1567 <> model1
+R1573:1580 evaluation <> eval_fun def
+binder 1570:1570 <> I:17
+R1588:1598 formulas <> proposition ind
+binder 1584:1584 <> p:18
+R1617:1619 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1604:1612 evaluation <> interpret def
+R1614:1614 evaluation <> I:17 var
+R1616:1616 evaluation <> p:18 var
+R1620:1623 Corelib.Init.Datatypes <> true constr
+R1652:1657 evaluation <> model1 def
+not 1635:1635 <> :::x_'⊨₁'_x
+def 1689:1701 <> model_example
+R1711:1719 evaluation <> :::x_'⊨₁'_x not
+R1741:1741 evaluation <> :::x_'⊨₁'_x not
+R1705:1710 evaluation <> myeval def
+R1720:1722 formulas <> And constr
+R1725:1728 formulas <> Atom constr
+R1734:1737 formulas <> Atom constr
+R1758:1763 evaluation <> model1 def
+R1780:1785 evaluation <> myeval def
+def 1819:1824 <> model2
+R1830:1837 evaluation <> eval_fun def
+binder 1827:1827 <> I:19
+R1846:1849 stdpp.gmap <> gset def
+R1851:1861 formulas <> proposition ind
+binder 1841:1842 <> Γ:20
+R1869:1875 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1889:1890 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1878:1888 formulas <> proposition ind
+binder 1876:1876 <> p:21
+R1899:1902 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1892:1896 stdpp.base <> ::stdpp_scope:x_'∈'_x not
+R1891:1891 evaluation <> p:21 var
+R1897:1898 evaluation <> Γ:20 var
+R1904:1911 evaluation <> :::x_'⊨₁'_x not
+R1903:1903 evaluation <> I:19 var
+R1912:1912 evaluation <> p:21 var
+R1942:1947 evaluation <> model2 def
+not 1924:1924 <> :::x_'⊨₂'_x
+def 1982:1987 <> model3
+R1995:1998 stdpp.gmap <> gset def
+R2000:2010 formulas <> proposition ind
+binder 1990:1991 <> Γ:22
+R2018:2028 formulas <> proposition ind
+binder 2014:2014 <> p:23
+R2036:2042 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2053:2055 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2045:2052 evaluation <> eval_fun def
+binder 2043:2043 <> I:24
+R2067:2070 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2057:2064 evaluation <> :::x_'⊨₂'_x not
+R2056:2056 evaluation <> I:24 var
+R2065:2066 evaluation <> Γ:22 var
+R2072:2079 evaluation <> :::x_'⊨₁'_x not
+R2071:2071 evaluation <> I:24 var
+R2080:2080 evaluation <> p:23 var
+R2110:2115 evaluation <> model3 def
+not 2092:2092 <> :::x_'⊨₃'_x
+def 2147:2160 <> model3_example
+R2174:2182 evaluation <> :::x_'⊨₃'_x not
+R2189:2189 evaluation <> :::x_'⊨₃'_x not
+R2164:2165 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2172:2173 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2166:2169 formulas <> Atom constr
+R2183:2186 formulas <> Atom constr
+R2206:2211 evaluation <> model3 def
+R2221:2226 evaluation <> model2 def
+R2236:2241 evaluation <> model1 def
+R2277:2280 formulas <> Atom constr
+R2277:2280 formulas <> Atom constr
+R2302:2318 stdpp.base <> elem_of_singleton meth
+R2302:2318 stdpp.base <> elem_of_singleton meth
+def 2349:2363 <> model3_example2
+R2369:2375 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2393:2394 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2382:2392 formulas <> proposition ind
+binder 2376:2376 <> A:25
+R2382:2392 formulas <> proposition ind
+binder 2378:2378 <> B:26
+R2409:2416 evaluation <> :::x_'⊨₃'_x not
+R2395:2396 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R2398:2399 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R2407:2408 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R2397:2397 evaluation <> A:25 var
+R2400:2402 formulas <> Imp constr
+R2404:2404 evaluation <> A:25 var
+R2406:2406 evaluation <> B:26 var
+R2417:2417 evaluation <> B:26 var
+R2442:2447 evaluation <> model3 def
+R2457:2462 evaluation <> model2 def
+R2472:2477 evaluation <> model1 def
+R2498:2506 evaluation <> interpret def
+R2498:2506 evaluation <> interpret def
+R2555:2557 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2542:2550 evaluation <> interpret def
+R2558:2561 Corelib.Init.Datatypes <> true constr
+R2555:2557 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2542:2550 evaluation <> interpret def
+R2558:2561 Corelib.Init.Datatypes <> true constr
+R2584:2596 stdpp.base <> elem_of_union meth
+R2584:2596 stdpp.base <> elem_of_union meth
+R2611:2627 stdpp.base <> elem_of_singleton meth
+R2611:2627 stdpp.base <> elem_of_singleton meth
+R2674:2676 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2653:2661 evaluation <> interpret def
+R2666:2668 formulas <> Imp constr
+R2677:2680 Corelib.Init.Datatypes <> true constr
+R2674:2676 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2653:2661 evaluation <> interpret def
+R2666:2668 formulas <> Imp constr
+R2677:2680 Corelib.Init.Datatypes <> true constr
+R2703:2715 stdpp.base <> elem_of_union meth
+R2703:2715 stdpp.base <> elem_of_union meth
+R2731:2747 stdpp.base <> elem_of_singleton meth
+R2731:2747 stdpp.base <> elem_of_singleton meth
+R2794:2796 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2773:2781 evaluation <> interpret def
+R2786:2788 formulas <> Imp constr
+R2797:2801 Corelib.Init.Datatypes <> false constr
+R2794:2796 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2773:2781 evaluation <> interpret def
+R2786:2788 formulas <> Imp constr
+R2797:2801 Corelib.Init.Datatypes <> false constr
+def 2922:2925 <> taut
+R2932:2942 formulas <> proposition ind
+binder 2928:2928 <> p:27
+R2948:2954 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2965:2967 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2957:2964 evaluation <> eval_fun def
+binder 2955:2955 <> I:28
+R2969:2976 evaluation <> :::x_'⊨₁'_x not
+R2968:2968 evaluation <> I:28 var
+R2977:2977 evaluation <> p:27 var
+R3004:3007 evaluation <> taut def
+not 2989:2989 <> :::'⊨₀'_x
+def 3039:3049 <> equivalence
+R3058:3068 formulas <> proposition ind
+binder 3052:3052 <> p:29
+binder 3054:3054 <> q:30
+R3074:3080 evaluation <> :::'⊨₀'_x not
+R3081:3083 formulas <> And constr
+R3086:3088 formulas <> Imp constr
+R3090:3090 evaluation <> p:29 var
+R3092:3092 evaluation <> q:30 var
+R3096:3098 formulas <> Imp constr
+R3100:3100 evaluation <> q:30 var
+R3102:3102 evaluation <> p:29 var
+R3129:3139 evaluation <> equivalence def
+not 3115:3115 <> :::x_'≡'_x
+def 3173:3184 <> equivalence2
+R3193:3203 formulas <> proposition ind
+binder 3187:3187 <> p:31
+binder 3189:3189 <> q:32
+R3211:3217 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3230:3231 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3222:3229 evaluation <> eval_fun def
+binder 3218:3218 <> I:33
+R3252:3256 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R3245:3247 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3232:3240 evaluation <> interpret def
+R3242:3242 evaluation <> I:33 var
+R3244:3244 evaluation <> p:31 var
+R3248:3251 Corelib.Init.Datatypes <> true constr
+R3270:3272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3257:3265 evaluation <> interpret def
+R3267:3267 evaluation <> I:33 var
+R3269:3269 evaluation <> q:32 var
+R3273:3276 Corelib.Init.Datatypes <> true constr
+R3305:3316 evaluation <> equivalence2 def
+not 3288:3288 <> :::x_'≡₂'_x
+prf 3346:3354 <> equive_eq
+R3363:3373 formulas <> proposition ind
+binder 3357:3357 <> A:34
+binder 3359:3359 <> B:35
+R3377:3377 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R3385:3391 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R3402:3402 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R3379:3383 evaluation <> :::x_'≡'_x not
+R3378:3378 evaluation <> A:34 var
+R3384:3384 evaluation <> B:35 var
+R3393:3400 evaluation <> :::x_'≡₂'_x not
+R3392:3392 evaluation <> A:34 var
+R3401:3401 evaluation <> B:35 var
+R3419:3429 evaluation <> equivalence def
+R3439:3450 evaluation <> equivalence2 def
+R3460:3463 evaluation <> taut def
+R3473:3478 evaluation <> model1 def
+R3593:3601 Corelib.Init.Datatypes <> andb_prop thm
+R3593:3601 Corelib.Init.Datatypes <> andb_prop thm
+R3719:3727 Corelib.Init.Datatypes <> andb_prop thm
+R3719:3727 Corelib.Init.Datatypes <> andb_prop thm
+R3781:3785 evaluation <> implb def
+R3826:3834 evaluation <> interpret def
+R3826:3834 evaluation <> interpret def
+R3890:3892 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3877:3885 evaluation <> interpret def
+R3893:3896 Corelib.Init.Datatypes <> true constr
+R3890:3892 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3877:3885 evaluation <> interpret def
+R3893:3896 Corelib.Init.Datatypes <> true constr
+R3965:3973 evaluation <> interpret def
+R3965:3973 evaluation <> interpret def
+def 4060:4064 <> taut1
+R4068:4074 evaluation <> :::'⊨₀'_x not
+R4075:4077 formulas <> Imp constr
+R4080:4083 formulas <> Atom constr
+R4089:4092 formulas <> Atom constr
+R4112:4115 evaluation <> taut def
+R4133:4138 evaluation <> model1 def
+R4155:4159 evaluation <> implb def
+def 4206:4210 <> taut2
+R4214:4220 evaluation <> :::'⊨₀'_x not
+R4221:4222 formulas <> Or constr
+R4225:4227 formulas <> Neg constr
+R4230:4233 formulas <> Atom constr
+R4240:4243 formulas <> Atom constr
+R4263:4266 evaluation <> taut def
+R4284:4289 evaluation <> model1 def
+def 4370:4374 <> taut3
+R4380:4386 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R4402:4403 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R4391:4401 formulas <> proposition ind
+binder 4387:4387 <> p:36
+R4404:4410 evaluation <> :::'⊨₀'_x not
+R4411:4412 formulas <> Or constr
+R4415:4417 formulas <> Neg constr
+R4419:4419 evaluation <> p:36 var
+R4423:4423 evaluation <> p:36 var
+R4441:4444 evaluation <> taut def
+R4462:4467 evaluation <> model1 def
+R4487:4495 evaluation <> interpret def
+R4487:4495 evaluation <> interpret def
+def 4564:4568 <> taut4
+R4574:4580 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R4596:4597 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R4585:4595 formulas <> proposition ind
+binder 4581:4581 <> p:37
+R4598:4604 evaluation <> :::'⊨₀'_x not
+R4605:4607 formulas <> Imp constr
+R4609:4609 evaluation <> p:37 var
+R4611:4611 evaluation <> p:37 var
+R4628:4631 evaluation <> taut def
+R4649:4654 evaluation <> model1 def
+R4674:4682 evaluation <> interpret def
+R4674:4682 evaluation <> interpret def
