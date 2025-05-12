@@ -1,0 +1,1 @@
+# interpolation_theorem_for_classical_propositional_logic
