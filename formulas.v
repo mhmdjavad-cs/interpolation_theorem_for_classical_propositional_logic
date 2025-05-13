@@ -5,18 +5,18 @@ From stdpp Require Import countable strings.
 
 Inductive proposition : Type :=
   | Bot
+  | Top
   | Atom  (n : nat)
   | And   (p1 p2 : proposition)
   | Or    (p1 p2 : proposition)
   | Imp   (p1 p2 : proposition)
   | Neg   (p1 : proposition).
 
-Check Bot.
-
 
 Fixpoint level (p : proposition) : nat :=
   match p with
   | Bot => 0
+  | Top => 0
   | Atom _ => 0
   | And p1 p2 => if (level p1) <=? (level p2)
   then (level p2) + 1 else (level p1) + 1
@@ -33,10 +33,7 @@ Theorem induction_on_level (q : proposition -> Prop) :
 Proof.
 Admitted.
 
-Check gset.
-Check (gset proposition).
 
-Check (EqDecision proposition).
 (*
 Instance EqDecision_proposition : EqDecision proposition := proposition_eq.
  *)
@@ -53,7 +50,17 @@ induction x.
   + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
 -destruct y.
+  + right. unfold not. intro. inversion H.
+  + left. reflexivity.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+-destruct y.
+  + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
   + destruct (n =? n0) eqn:h1.
     ++ apply Nat.eqb_eq in h1. left. rewrite h1. reflexivity.
@@ -66,20 +73,6 @@ induction x.
 -destruct y.
   + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
-  + specialize IHx1 with (y := y1). specialize IHx2 with ( y := y2).
-    destruct IHx1.
-    ++ destruct IHx2.
-      --left. rewrite e. rewrite e0. reflexivity.
-      --right. unfold not. intro. inversion H. apply n. apply H2.
-    ++ destruct IHx2.
-      --right. unfold not. intro. inversion H. apply n. apply H1.
-      --right. unfold not. intro. inversion H. apply n. apply H1.
-  + right. unfold not. intro. inversion H.
-  + right. unfold not. intro. inversion H.
-  + right. unfold not. intro. inversion H.
--destruct y.
-  + right. unfold not. intro. inversion H.
-  + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
   + specialize IHx1 with (y := y1). specialize IHx2 with ( y := y2).
     destruct IHx1.
@@ -89,6 +82,7 @@ induction x.
     ++ destruct IHx2.
       --right. unfold not. intro. inversion H. apply n. apply H1.
       --right. unfold not. intro. inversion H. apply n. apply H1.
+  + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
 -destruct y.
@@ -105,7 +99,24 @@ induction x.
       --right. unfold not. intro. inversion H. apply n. apply H1.
       --right. unfold not. intro. inversion H. apply n. apply H1.
   + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
 -destruct y.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+  + right. unfold not. intro. inversion H.
+  + specialize IHx1 with (y := y1). specialize IHx2 with ( y := y2).
+    destruct IHx1.
+    ++ destruct IHx2.
+      --left. rewrite e. rewrite e0. reflexivity.
+      --right. unfold not. intro. inversion H. apply n. apply H2.
+    ++ destruct IHx2.
+      --right. unfold not. intro. inversion H. apply n. apply H1.
+      --right. unfold not. intro. inversion H. apply n. apply H1.
+  + right. unfold not. intro. inversion H.
+-destruct y.
+  + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
   + right. unfold not. intro. inversion H.
@@ -129,6 +140,7 @@ Admitted.
 Fixpoint sub_expression (p : proposition) : gset proposition :=
   match p with
   | Bot => {[Bot]}
+  | Top => {[Top]}
   | Atom n => {[Atom n]}
   | And p1 p2 => (sub_expression p1) ∪ (sub_expression p2) ∪ {[And p1 p2]}
   | Or p1 p2 => (sub_expression p1) ∪ (sub_expression p2) ∪ {[Or p1 p2]}

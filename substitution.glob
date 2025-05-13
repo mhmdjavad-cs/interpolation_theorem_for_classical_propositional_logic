@@ -1,4 +1,4 @@
-DIGEST 3a29dc2d88aa802a8a8461bf15651556
+DIGEST 70a291d0b579f6594f68969ae4efcac4
 Fsubstitution
 R27:30 stdpp.gmap <> <> lib
 R59:62 stdpp.base <> <> lib
@@ -16,149 +16,195 @@ R219:229 formulas <> proposition ind
 R242:242 substitution <> A:2 var
 R253:255 formulas <> Bot constr
 R266:268 formulas <> Bot constr
-R274:277 formulas <> Atom constr
-R290:296 Stdlib.Arith.PeanoNat Nat eqb def
-R300:300 substitution <> n:1 var
-R314:314 substitution <> A:2 var
-R307:307 substitution <> B:3 var
-R320:322 formulas <> And constr
-R333:335 formulas <> And constr
-R338:349 substitution <> substitution:4 def
-R356:356 substitution <> B:3 var
-R351:351 substitution <> n:1 var
-R360:371 substitution <> substitution:4 def
-R378:378 substitution <> B:3 var
-R373:373 substitution <> n:1 var
-R385:386 formulas <> Or constr
-R398:399 formulas <> Or constr
-R403:414 substitution <> substitution:4 def
-R421:421 substitution <> B:3 var
-R416:416 substitution <> n:1 var
-R425:436 substitution <> substitution:4 def
-R443:443 substitution <> B:3 var
-R438:438 substitution <> n:1 var
-R450:452 formulas <> Imp constr
-R463:465 formulas <> Imp constr
-R468:479 substitution <> substitution:4 def
-R486:486 substitution <> B:3 var
-R481:481 substitution <> n:1 var
-R490:501 substitution <> substitution:4 def
-R508:508 substitution <> B:3 var
-R503:503 substitution <> n:1 var
-R515:517 formulas <> Neg constr
-R528:530 formulas <> Neg constr
-R533:544 substitution <> substitution:4 def
-R551:551 substitution <> B:3 var
-R546:546 substitution <> n:1 var
-def 570:573 <> sub1
-R577:584 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
-R614:618 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
-R589:591 Corelib.Init.Datatypes <> nat ind
-binder 585:585 <> n:6
-R603:613 formulas <> proposition ind
-binder 595:595 <> p:7
-R603:613 formulas <> proposition ind
-binder 597:597 <> q:8
-R603:613 formulas <> proposition ind
-binder 599:599 <> A:9
-R626:629 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
-R620:624 evaluation <> :::x_'≡'_x not
-R619:619 substitution <> p:7 var
-R625:625 substitution <> q:8 var
-R648:652 evaluation <> :::x_'≡'_x not
-R630:641 substitution <> substitution def
-R643:643 substitution <> n:6 var
-R645:645 substitution <> A:9 var
-R647:647 substitution <> p:7 var
-R653:664 substitution <> substitution def
-R666:666 substitution <> n:6 var
-R668:668 substitution <> A:9 var
-R670:670 substitution <> q:8 var
-R694:702 evaluation <> equive_eq thm
-R694:702 evaluation <> equive_eq thm
-R716:724 evaluation <> equive_eq thm
-R716:724 evaluation <> equive_eq thm
-R734:745 evaluation <> equivalence2 def
-R760:771 evaluation <> equivalence2 def
-R828:831 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
-R828:831 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
-R991:1003 Stdlib.Bool.Bool <> andb_true_iff thm
-R991:1003 Stdlib.Bool.Bool <> andb_true_iff thm
-R1034:1046 Stdlib.Bool.Bool <> andb_true_iff thm
-R1034:1046 Stdlib.Bool.Bool <> andb_true_iff thm
-R1183:1195 Stdlib.Bool.Bool <> andb_true_iff thm
-R1183:1195 Stdlib.Bool.Bool <> andb_true_iff thm
-R1226:1238 Stdlib.Bool.Bool <> andb_true_iff thm
-R1226:1238 Stdlib.Bool.Bool <> andb_true_iff thm
-def 1412:1415 <> sub2
-R1419:1426 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
-R1452:1458 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
-R1431:1433 Corelib.Init.Datatypes <> nat ind
-binder 1427:1427 <> p:10
-R1431:1433 Corelib.Init.Datatypes <> nat ind
-binder 1429:1429 <> q:11
-R1441:1451 formulas <> proposition ind
-binder 1437:1437 <> A:12
-R1478:1482 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
-R1469:1476 evaluation <> :::x_'⊨₃'_x not
-R1459:1460 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
-R1467:1468 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
-R1461:1464 formulas <> Atom constr
-R1466:1466 substitution <> p:10 var
-R1477:1477 substitution <> A:12 var
-R1483:1490 evaluation <> :::'⊨₀'_x not
-R1531:1532 evaluation <> :::'⊨₀'_x not
-R1491:1502 substitution <> substitution def
-R1504:1504 substitution <> p:10 var
-R1506:1506 substitution <> A:12 var
-R1509:1511 formulas <> Imp constr
-R1514:1517 formulas <> Atom constr
-R1519:1519 substitution <> q:11 var
-R1523:1526 formulas <> Atom constr
-R1528:1528 substitution <> q:11 var
-R1565:1570 evaluation <> model3 def
-R1580:1583 evaluation <> taut def
-R1593:1598 evaluation <> model2 def
-R1608:1613 evaluation <> model1 def
-prf 1644:1665 <> substitution_tautology
-R1671:1678 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
-R1704:1706 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
-R1681:1683 Corelib.Init.Datatypes <> nat ind
-binder 1679:1679 <> n:13
-R1693:1703 formulas <> proposition ind
-binder 1687:1687 <> A:14
-R1693:1703 formulas <> proposition ind
-binder 1689:1689 <> B:15
-R1715:1718 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
-R1707:1713 evaluation <> :::'⊨₀'_x not
-R1714:1714 substitution <> A:14 var
-R1719:1725 evaluation <> :::'⊨₀'_x not
-R1726:1737 substitution <> substitution def
-R1739:1739 substitution <> n:13 var
-R1741:1741 substitution <> A:14 var
-R1743:1743 substitution <> B:15 var
-R1760:1763 evaluation <> taut def
-R1773:1778 evaluation <> model1 def
-R1892:1895 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
-R1892:1895 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
-binder 1926:1926 <> n:16
-R1934:1940 Stdlib.Arith.PeanoNat Nat eqb def
-R1942:1942 substitution <> n:16 var
-R1963:1966 Corelib.Init.Datatypes <> true constr
-R1952:1956 Corelib.Init.Datatypes <> false constr
-binder 1926:1926 <> n:17
-R1934:1940 Stdlib.Arith.PeanoNat Nat eqb def
-R1942:1942 substitution <> n:17 var
-R1963:1966 Corelib.Init.Datatypes <> true constr
-R1952:1956 Corelib.Init.Datatypes <> false constr
-R2006:2008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
-R1985:1993 evaluation <> interpret def
-R1998:2001 formulas <> Atom constr
-R2009:2013 Corelib.Init.Datatypes <> false constr
-R2006:2008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
-R1985:1993 evaluation <> interpret def
-R1998:2001 formulas <> Atom constr
-R2009:2013 Corelib.Init.Datatypes <> false constr
-R2047:2058 Stdlib.Arith.PeanoNat Nat eqb_refl thm
-R2047:2058 Stdlib.Arith.PeanoNat Nat eqb_refl thm
-R2047:2058 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+R274:276 formulas <> Top constr
+R287:289 formulas <> Top constr
+R295:298 formulas <> Atom constr
+R311:317 Stdlib.Arith.PeanoNat Nat eqb def
+R321:321 substitution <> n:1 var
+R335:335 substitution <> A:2 var
+R328:328 substitution <> B:3 var
+R341:343 formulas <> And constr
+R354:356 formulas <> And constr
+R359:370 substitution <> substitution:4 def
+R377:377 substitution <> B:3 var
+R372:372 substitution <> n:1 var
+R381:392 substitution <> substitution:4 def
+R399:399 substitution <> B:3 var
+R394:394 substitution <> n:1 var
+R406:407 formulas <> Or constr
+R419:420 formulas <> Or constr
+R424:435 substitution <> substitution:4 def
+R442:442 substitution <> B:3 var
+R437:437 substitution <> n:1 var
+R446:457 substitution <> substitution:4 def
+R464:464 substitution <> B:3 var
+R459:459 substitution <> n:1 var
+R471:473 formulas <> Imp constr
+R484:486 formulas <> Imp constr
+R489:500 substitution <> substitution:4 def
+R507:507 substitution <> B:3 var
+R502:502 substitution <> n:1 var
+R511:522 substitution <> substitution:4 def
+R529:529 substitution <> B:3 var
+R524:524 substitution <> n:1 var
+R536:538 formulas <> Neg constr
+R549:551 formulas <> Neg constr
+R554:565 substitution <> substitution:4 def
+R572:572 substitution <> B:3 var
+R567:567 substitution <> n:1 var
+def 591:594 <> sub1
+R598:605 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R635:639 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R610:612 Corelib.Init.Datatypes <> nat ind
+binder 606:606 <> n:6
+R624:634 formulas <> proposition ind
+binder 616:616 <> p:7
+R624:634 formulas <> proposition ind
+binder 618:618 <> q:8
+R624:634 formulas <> proposition ind
+binder 620:620 <> A:9
+R647:650 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R641:645 evaluation <> :::x_'≡'_x not
+R640:640 substitution <> p:7 var
+R646:646 substitution <> q:8 var
+R669:673 evaluation <> :::x_'≡'_x not
+R651:662 substitution <> substitution def
+R664:664 substitution <> n:6 var
+R666:666 substitution <> A:9 var
+R668:668 substitution <> p:7 var
+R674:685 substitution <> substitution def
+R687:687 substitution <> n:6 var
+R689:689 substitution <> A:9 var
+R691:691 substitution <> q:8 var
+R715:723 evaluation <> equive_eq thm
+R715:723 evaluation <> equive_eq thm
+R737:745 evaluation <> equive_eq thm
+R737:745 evaluation <> equive_eq thm
+R755:766 evaluation <> equivalence2 def
+R781:792 evaluation <> equivalence2 def
+R870:873 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+R870:873 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+R1033:1045 Stdlib.Bool.Bool <> andb_true_iff thm
+R1033:1045 Stdlib.Bool.Bool <> andb_true_iff thm
+R1076:1088 Stdlib.Bool.Bool <> andb_true_iff thm
+R1076:1088 Stdlib.Bool.Bool <> andb_true_iff thm
+R1225:1237 Stdlib.Bool.Bool <> andb_true_iff thm
+R1225:1237 Stdlib.Bool.Bool <> andb_true_iff thm
+R1268:1280 Stdlib.Bool.Bool <> andb_true_iff thm
+R1268:1280 Stdlib.Bool.Bool <> andb_true_iff thm
+def 1454:1457 <> sub2
+R1461:1468 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1494:1500 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1473:1475 Corelib.Init.Datatypes <> nat ind
+binder 1469:1469 <> p:10
+R1473:1475 Corelib.Init.Datatypes <> nat ind
+binder 1471:1471 <> q:11
+R1483:1493 formulas <> proposition ind
+binder 1479:1479 <> A:12
+R1520:1524 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R1511:1518 evaluation <> :::x_'⊨₃'_x not
+R1501:1502 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1509:1510 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1503:1506 formulas <> Atom constr
+R1508:1508 substitution <> p:10 var
+R1519:1519 substitution <> A:12 var
+R1525:1532 evaluation <> :::'⊨₀'_x not
+R1573:1574 evaluation <> :::'⊨₀'_x not
+R1533:1544 substitution <> substitution def
+R1546:1546 substitution <> p:10 var
+R1548:1548 substitution <> A:12 var
+R1551:1553 formulas <> Imp constr
+R1556:1559 formulas <> Atom constr
+R1561:1561 substitution <> q:11 var
+R1565:1568 formulas <> Atom constr
+R1570:1570 substitution <> q:11 var
+R1607:1612 evaluation <> model3 def
+R1622:1625 evaluation <> taut def
+R1635:1640 evaluation <> model2 def
+R1650:1655 evaluation <> model1 def
+prf 1686:1707 <> substitution_tautology
+R1713:1720 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1746:1748 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R1723:1725 Corelib.Init.Datatypes <> nat ind
+binder 1721:1721 <> n:13
+R1735:1745 formulas <> proposition ind
+binder 1729:1729 <> A:14
+R1735:1745 formulas <> proposition ind
+binder 1731:1731 <> B:15
+R1757:1760 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1749:1755 evaluation <> :::'⊨₀'_x not
+R1756:1756 substitution <> A:14 var
+R1761:1767 evaluation <> :::'⊨₀'_x not
+R1768:1779 substitution <> substitution def
+R1781:1781 substitution <> n:13 var
+R1783:1783 substitution <> A:14 var
+R1785:1785 substitution <> B:15 var
+R1802:1805 evaluation <> taut def
+R1815:1820 evaluation <> model1 def
+R1997:2000 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+R1997:2000 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+binder 2031:2031 <> n:16
+R2039:2045 Stdlib.Arith.PeanoNat Nat eqb def
+R2047:2047 substitution <> n:16 var
+R2068:2071 Corelib.Init.Datatypes <> true constr
+R2057:2061 Corelib.Init.Datatypes <> false constr
+binder 2031:2031 <> n:17
+R2039:2045 Stdlib.Arith.PeanoNat Nat eqb def
+R2047:2047 substitution <> n:17 var
+R2068:2071 Corelib.Init.Datatypes <> true constr
+R2057:2061 Corelib.Init.Datatypes <> false constr
+R2111:2113 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2090:2098 evaluation <> interpret def
+R2103:2106 formulas <> Atom constr
+R2114:2118 Corelib.Init.Datatypes <> false constr
+R2111:2113 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2090:2098 evaluation <> interpret def
+R2103:2106 formulas <> Atom constr
+R2114:2118 Corelib.Init.Datatypes <> false constr
+R2152:2163 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+R2152:2163 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+R2152:2163 Stdlib.Arith.PeanoNat Nat eqb_refl thm
+prf 2318:2350 <> substitution_by_equivalence_props
+R2361:2371 formulas <> proposition ind
+binder 2353:2353 <> p:18
+binder 2355:2355 <> q:19
+binder 2357:2357 <> A:20
+R2379:2386 evaluation <> eval_fun def
+binder 2375:2375 <> I:21
+R2394:2396 Corelib.Init.Datatypes <> nat ind
+binder 2390:2390 <> x:22
+R2402:2402 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2413:2419 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2404:2411 evaluation <> :::x_'≡₂'_x not
+R2403:2403 substitution <> p:18 var
+R2412:2412 substitution <> q:19 var
+R2420:2420 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2460:2467 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2507:2507 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2453:2455 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2421:2429 evaluation <> interpret def
+R2431:2431 substitution <> I:21 var
+R2434:2445 substitution <> substitution def
+R2447:2447 substitution <> x:22 var
+R2449:2449 substitution <> A:20 var
+R2451:2451 substitution <> p:18 var
+R2456:2459 Corelib.Init.Datatypes <> true constr
+R2500:2502 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2468:2476 evaluation <> interpret def
+R2478:2478 substitution <> I:21 var
+R2481:2492 substitution <> substitution def
+R2494:2494 substitution <> x:22 var
+R2496:2496 substitution <> A:20 var
+R2498:2498 substitution <> q:19 var
+R2503:2506 Corelib.Init.Datatypes <> true constr
+R2524:2535 evaluation <> equivalence2 def
+R2625:2628 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+R2625:2628 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'=?'_x not
+R2772:2784 Stdlib.Bool.Bool <> andb_true_iff thm
+R2772:2784 Stdlib.Bool.Bool <> andb_true_iff thm
+R2806:2818 Stdlib.Bool.Bool <> andb_true_iff thm
+R2806:2818 Stdlib.Bool.Bool <> andb_true_iff thm
+R2911:2922 Stdlib.Bool.Bool <> orb_true_iff thm
+R2911:2922 Stdlib.Bool.Bool <> orb_true_iff thm
+R2944:2955 Stdlib.Bool.Bool <> orb_true_iff thm
+R2944:2955 Stdlib.Bool.Bool <> orb_true_iff thm

@@ -10,6 +10,7 @@ Require Import evaluation.
 Fixpoint substitution (n : nat) (A B : proposition) : proposition :=
   match A with
   | Bot       => Bot
+  | Top       => Top
   | Atom m    => if Nat.eqb m n then B else A
   | And P1 P2 => And (substitution n P1 B) (substitution n P2 B)
   | Or  P1 P2 => Or  (substitution n P1 B) (substitution n P2 B)
@@ -23,6 +24,7 @@ Proof.
 intros. apply equive_eq in H. apply equive_eq.
 unfold equivalence2 in H. unfold equivalence2.
 induction A.
+-simpl. reflexivity.
 -simpl. reflexivity.
 -simpl. destruct (n0 =? n) eqn:h1.
   +apply H.
@@ -58,6 +60,7 @@ Proof.
 unfold taut. unfold model1. intros. simpl.
 induction A.
 -simpl. specialize H with (I := I). rewrite <- H. reflexivity.
+-simpl. specialize H with (I := I). rewrite <- H. reflexivity.
 -simpl. destruct (n0 =? n) eqn:h1.
   + pose (F := fun n => if Nat.eqb n n0 then false else true).
   assert (h2 : interpret F (Atom n0) = false). { simpl. unfold F.
@@ -65,4 +68,27 @@ induction A.
   specialize H with (I := F). rewrite H in h2. inversion h2.
   +specialize H with (I := I). assumption.
 -simpl.
+Admitted.
+
+
+
+Theorem substitution_by_equivalence_props (p q A : proposition) (I : eval_fun) (x : nat):
+  (p ≡₂ q) ->
+  (interpret I (substitution x A p) = true) ->
+  (interpret I (substitution x A q) = true).
+Proof.
+unfold equivalence2. intros.
+induction A.
+-simpl. simpl in H0. assumption.
+-reflexivity.
+-simpl. destruct (n =? x) eqn:m.
+  +simpl in H0. rewrite m in H0. apply H. assumption.
+  +simpl. simpl in H0. rewrite m in H0. simpl in H0. assumption.
+-simpl. apply andb_true_iff. simpl in H0. apply andb_true_iff in H0. destruct H0. split.
+  +apply IHA1. apply H0.
+  +apply IHA2. apply H1.
+-simpl. apply orb_true_iff. simpl in H0. apply orb_true_iff in H0. destruct H0.
+  + left. apply IHA1. apply H0.
+  + right. apply IHA2. apply H0.
+
 Admitted.

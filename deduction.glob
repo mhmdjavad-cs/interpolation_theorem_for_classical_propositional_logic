@@ -1,0 +1,523 @@
+DIGEST f9c79faf12e24629bfae9f1d1935fd95
+Fdeduction
+R27:30 stdpp.gmap <> <> lib
+R59:62 stdpp.base <> <> lib
+R91:99 stdpp.countable <> <> lib
+R101:107 stdpp.strings <> <> lib
+R126:133 formulas <> <> lib
+R151:160 evaluation <> <> lib
+R178:189 substitution <> <> lib
+ind 355:371 <> natural_deduction
+constr 428:432 <> axiom
+constr 523:542 <> and_elimination_left
+constr 681:701 <> and_elimination_right
+constr 840:855 <> and_introduction
+constr 1000:1013 <> or_elimination
+constr 1256:1275 <> or_introduction_left
+constr 1393:1413 <> or_introduction_right
+constr 1531:1553 <> implication_elimination
+constr 1737:1760 <> implication_introduction
+constr 1890:1909 <> negation_elimination
+constr 2075:2095 <> negation_introduction
+constr 2224:2226 <> RAA
+constr 2352:2366 <> bot_elimination
+constr 2477:2492 <> top_introduction
+R377:377 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R394:398 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R378:381 stdpp.gmap <> gset def
+R383:393 formulas <> proposition ind
+R399:399 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R411:415 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R400:410 formulas <> proposition ind
+R440:443 stdpp.gmap <> gset def
+R445:455 formulas <> proposition ind
+binder 435:436 <> Γ:3
+R463:473 formulas <> proposition ind
+binder 459:459 <> p:4
+R492:495 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R485:489 stdpp.base <> ::stdpp_scope:x_'∈'_x not
+R484:484 deduction <> p:4 var
+R490:491 deduction <> Γ:3 var
+R496:512 deduction <> natural_deduction:1 ind
+R517:517 deduction <> p:4 var
+R514:515 deduction <> Γ:3 var
+R550:553 stdpp.gmap <> gset def
+R555:565 formulas <> proposition ind
+binder 545:546 <> Γ:5
+R573:583 formulas <> proposition ind
+binder 569:569 <> p:6
+R594:594 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R648:653 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R595:601 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R616:617 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R605:615 formulas <> proposition ind
+binder 602:602 <> q:7
+R618:634 deduction <> natural_deduction:1 ind
+R640:642 formulas <> And constr
+R644:644 deduction <> p:6 var
+R646:646 deduction <> q:7 var
+R636:637 deduction <> Γ:5 var
+R654:670 deduction <> natural_deduction:1 ind
+R675:675 deduction <> p:6 var
+R672:673 deduction <> Γ:5 var
+R709:712 stdpp.gmap <> gset def
+R714:724 formulas <> proposition ind
+binder 704:705 <> Γ:8
+R732:742 formulas <> proposition ind
+binder 728:728 <> p:9
+R753:753 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R807:812 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R754:760 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R775:776 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R764:774 formulas <> proposition ind
+binder 761:761 <> q:10
+R777:793 deduction <> natural_deduction:1 ind
+R799:801 formulas <> And constr
+R803:803 deduction <> q:10 var
+R805:805 deduction <> p:9 var
+R795:796 deduction <> Γ:8 var
+R813:829 deduction <> natural_deduction:1 ind
+R834:834 deduction <> p:9 var
+R831:832 deduction <> Γ:8 var
+R863:866 stdpp.gmap <> gset def
+R868:878 formulas <> proposition ind
+binder 858:859 <> Γ:11
+R887:897 formulas <> proposition ind
+binder 882:882 <> p:12
+binder 884:884 <> q:13
+R961:964 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R908:908 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R931:937 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R960:960 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R909:925 deduction <> natural_deduction:1 ind
+R930:930 deduction <> p:12 var
+R927:928 deduction <> Γ:11 var
+R938:954 deduction <> natural_deduction:1 ind
+R959:959 deduction <> q:13 var
+R956:957 deduction <> Γ:11 var
+R965:981 deduction <> natural_deduction:1 ind
+R987:989 formulas <> And constr
+R991:991 deduction <> p:12 var
+R993:993 deduction <> q:13 var
+R983:984 deduction <> Γ:11 var
+R1021:1024 stdpp.gmap <> gset def
+R1026:1036 formulas <> proposition ind
+binder 1016:1017 <> Γ:14
+R1044:1054 formulas <> proposition ind
+binder 1040:1040 <> p:15
+R1065:1065 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1223:1228 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1066:1072 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1090:1097 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1079:1089 formulas <> proposition ind
+binder 1073:1073 <> A:16
+R1079:1089 formulas <> proposition ind
+binder 1075:1075 <> B:17
+R1098:1098 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1128:1139 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1099:1115 deduction <> natural_deduction:1 ind
+R1121:1122 formulas <> Or constr
+R1124:1124 deduction <> A:16 var
+R1126:1126 deduction <> B:17 var
+R1117:1118 deduction <> Γ:14 var
+R1140:1140 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1175:1187 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1222:1222 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1141:1157 deduction <> natural_deduction:1 ind
+R1174:1174 deduction <> p:15 var
+R1162:1166 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R1160:1161 deduction <> Γ:14 var
+R1167:1168 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1170:1171 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1169:1169 deduction <> A:16 var
+R1188:1204 deduction <> natural_deduction:1 ind
+R1221:1221 deduction <> p:15 var
+R1209:1213 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R1207:1208 deduction <> Γ:14 var
+R1214:1215 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1217:1218 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1216:1216 deduction <> B:17 var
+R1229:1245 deduction <> natural_deduction:1 ind
+R1250:1250 deduction <> p:15 var
+R1247:1248 deduction <> Γ:14 var
+R1283:1286 stdpp.gmap <> gset def
+R1288:1298 formulas <> proposition ind
+binder 1278:1279 <> Γ:18
+R1308:1318 formulas <> proposition ind
+binder 1302:1302 <> A:19
+binder 1304:1304 <> B:20
+R1329:1329 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1352:1357 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1387:1387 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1330:1346 deduction <> natural_deduction:1 ind
+R1351:1351 deduction <> A:19 var
+R1348:1349 deduction <> Γ:18 var
+R1358:1374 deduction <> natural_deduction:1 ind
+R1380:1381 formulas <> Or constr
+R1383:1383 deduction <> A:19 var
+R1385:1385 deduction <> B:20 var
+R1376:1377 deduction <> Γ:18 var
+R1421:1424 stdpp.gmap <> gset def
+R1426:1436 formulas <> proposition ind
+binder 1416:1417 <> Γ:21
+R1446:1456 formulas <> proposition ind
+binder 1440:1440 <> A:22
+binder 1442:1442 <> B:23
+R1467:1467 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1490:1495 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1525:1525 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1468:1484 deduction <> natural_deduction:1 ind
+R1489:1489 deduction <> B:23 var
+R1486:1487 deduction <> Γ:21 var
+R1496:1512 deduction <> natural_deduction:1 ind
+R1518:1519 formulas <> Or constr
+R1521:1521 deduction <> A:22 var
+R1523:1523 deduction <> B:23 var
+R1514:1515 deduction <> Γ:21 var
+R1561:1564 stdpp.gmap <> gset def
+R1566:1576 formulas <> proposition ind
+binder 1556:1557 <> Γ:24
+R1584:1594 formulas <> proposition ind
+binder 1580:1580 <> p:25
+R1605:1605 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1703:1708 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1731:1731 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1606:1612 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1628:1635 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1617:1627 formulas <> proposition ind
+binder 1613:1613 <> q:26
+R1636:1636 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1659:1671 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1702:1702 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1637:1653 deduction <> natural_deduction:1 ind
+R1658:1658 deduction <> q:26 var
+R1655:1656 deduction <> Γ:24 var
+R1672:1688 deduction <> natural_deduction:1 ind
+R1694:1696 formulas <> Imp constr
+R1698:1698 deduction <> q:26 var
+R1700:1700 deduction <> p:25 var
+R1690:1691 deduction <> Γ:24 var
+R1709:1725 deduction <> natural_deduction:1 ind
+R1730:1730 deduction <> p:25 var
+R1727:1728 deduction <> Γ:24 var
+R1768:1771 stdpp.gmap <> gset def
+R1773:1783 formulas <> proposition ind
+binder 1763:1764 <> Γ:27
+R1793:1803 formulas <> proposition ind
+binder 1787:1787 <> p:28
+binder 1789:1789 <> q:29
+R1813:1813 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1848:1853 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1884:1884 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1814:1830 deduction <> natural_deduction:1 ind
+R1847:1847 deduction <> q:29 var
+R1835:1839 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R1833:1834 deduction <> Γ:27 var
+R1840:1841 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1843:1844 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R1842:1842 deduction <> p:28 var
+R1854:1870 deduction <> natural_deduction:1 ind
+R1876:1878 formulas <> Imp constr
+R1880:1880 deduction <> p:28 var
+R1882:1882 deduction <> q:29 var
+R1872:1873 deduction <> Γ:27 var
+R1917:1920 stdpp.gmap <> gset def
+R1922:1932 formulas <> proposition ind
+binder 1912:1913 <> Γ:30
+R1943:1943 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2033:2044 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2069:2069 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1944:1950 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1966:1973 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1955:1965 formulas <> proposition ind
+binder 1951:1951 <> p:31
+R1974:1974 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1997:2003 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R2032:2032 Stdlib.Unicode.Utf8_core <> ::type_scope:x_'∧'_x not
+R1975:1991 deduction <> natural_deduction:1 ind
+R1996:1996 deduction <> p:31 var
+R1993:1994 deduction <> Γ:30 var
+R2004:2020 deduction <> natural_deduction:1 ind
+R2026:2028 formulas <> Neg constr
+R2030:2030 deduction <> p:31 var
+R2022:2023 deduction <> Γ:30 var
+R2045:2061 deduction <> natural_deduction:1 ind
+R2066:2068 formulas <> Bot constr
+R2063:2064 deduction <> Γ:30 var
+R2103:2106 stdpp.gmap <> gset def
+R2108:2118 formulas <> proposition ind
+binder 2098:2099 <> Γ:32
+R2126:2136 formulas <> proposition ind
+binder 2122:2122 <> p:33
+R2147:2147 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2184:2189 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2218:2218 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2148:2164 deduction <> natural_deduction:1 ind
+R2181:2183 formulas <> Bot constr
+R2169:2173 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R2167:2168 deduction <> Γ:32 var
+R2174:2175 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2177:2178 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2176:2176 deduction <> p:33 var
+R2190:2206 deduction <> natural_deduction:1 ind
+R2212:2214 formulas <> Neg constr
+R2216:2216 deduction <> p:33 var
+R2208:2209 deduction <> Γ:32 var
+R2234:2237 stdpp.gmap <> gset def
+R2239:2249 formulas <> proposition ind
+binder 2229:2230 <> Γ:34
+R2257:2267 formulas <> proposition ind
+binder 2253:2253 <> p:35
+R2277:2277 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2318:2323 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2346:2346 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2278:2294 deduction <> natural_deduction:1 ind
+R2315:2317 formulas <> Bot constr
+R2299:2303 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R2297:2298 deduction <> Γ:34 var
+R2304:2305 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2311:2312 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2306:2308 formulas <> Neg constr
+R2310:2310 deduction <> p:35 var
+R2324:2340 deduction <> natural_deduction:1 ind
+R2345:2345 deduction <> p:35 var
+R2342:2343 deduction <> Γ:34 var
+R2374:2377 stdpp.gmap <> gset def
+R2379:2389 formulas <> proposition ind
+binder 2369:2370 <> Γ:36
+R2397:2407 formulas <> proposition ind
+binder 2393:2393 <> p:37
+R2418:2418 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2443:2448 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2471:2471 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2419:2435 deduction <> natural_deduction:1 ind
+R2440:2442 formulas <> Bot constr
+R2437:2438 deduction <> Γ:36 var
+R2449:2465 deduction <> natural_deduction:1 ind
+R2470:2470 deduction <> p:37 var
+R2467:2468 deduction <> Γ:36 var
+R2500:2503 stdpp.gmap <> gset def
+R2505:2515 formulas <> proposition ind
+binder 2495:2496 <> Γ:38
+R2527:2543 deduction <> natural_deduction:1 ind
+R2548:2550 formulas <> Top constr
+R2545:2546 deduction <> Γ:38 var
+scheme 355:371 <> natural_deduction_ind
+scheme 355:371 <> natural_deduction_sind
+R2582:2598 deduction <> natural_deduction ind
+not 2565:2565 <> :::x_'⊢'_x
+def 2650:2652 <> nd1
+R2656:2662 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2676:2678 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2665:2675 formulas <> proposition ind
+binder 2663:2663 <> p:39
+R2684:2688 deduction <> :::x_'⊢'_x not
+R2679:2680 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2682:2683 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2681:2681 deduction <> p:39 var
+R2689:2689 deduction <> p:39 var
+R2713:2717 deduction <> axiom constr
+R2713:2717 deduction <> axiom constr
+def 2746:2748 <> nd2
+R2752:2758 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2776:2777 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2765:2775 formulas <> proposition ind
+binder 2759:2759 <> p:40
+R2765:2775 formulas <> proposition ind
+binder 2761:2761 <> q:41
+R2789:2793 deduction <> :::x_'⊢'_x not
+R2778:2779 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2787:2788 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R2780:2782 formulas <> And constr
+R2784:2784 deduction <> p:40 var
+R2786:2786 deduction <> q:41 var
+R2794:2794 deduction <> p:40 var
+R2818:2837 deduction <> and_elimination_left constr
+R2818:2837 deduction <> and_elimination_left constr
+R2856:2860 deduction <> axiom constr
+R2856:2860 deduction <> axiom constr
+def 2889:2891 <> nd3
+R2895:2901 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2919:2920 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R2908:2918 formulas <> proposition ind
+binder 2902:2902 <> p:42
+R2908:2918 formulas <> proposition ind
+binder 2904:2904 <> q:43
+R2930:2935 deduction <> :::x_'⊢'_x not
+R2943:2943 deduction <> :::x_'⊢'_x not
+R2921:2922 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R2924:2926 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R2928:2929 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R2923:2923 deduction <> p:42 var
+R2927:2927 deduction <> q:43 var
+R2936:2938 formulas <> And constr
+R2940:2940 deduction <> p:42 var
+R2942:2942 deduction <> q:43 var
+R2967:2982 deduction <> and_introduction constr
+R2967:2982 deduction <> and_introduction constr
+R2998:3002 deduction <> axiom constr
+R2998:3002 deduction <> axiom constr
+R2998:3002 deduction <> axiom constr
+def 3032:3034 <> nd4
+R3038:3044 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3062:3063 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3051:3061 formulas <> proposition ind
+binder 3045:3045 <> p:44
+R3051:3061 formulas <> proposition ind
+binder 3047:3047 <> q:45
+R3077:3081 deduction <> :::x_'⊢'_x not
+R3064:3065 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R3067:3069 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R3075:3076 stdpp.base <> ::stdpp_scope:'{['_x_';'_x_';'_'..'_';'_x_']}' not
+R3066:3066 deduction <> p:44 var
+R3070:3072 formulas <> Neg constr
+R3074:3074 deduction <> p:44 var
+R3082:3082 deduction <> q:45 var
+R3106:3120 deduction <> bot_elimination constr
+R3106:3120 deduction <> bot_elimination constr
+R3129:3148 deduction <> negation_elimination constr
+R3129:3148 deduction <> negation_elimination constr
+R3175:3179 deduction <> axiom constr
+R3175:3179 deduction <> axiom constr
+R3175:3179 deduction <> axiom constr
+def 3209:3211 <> nd5
+R3215:3221 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3237:3238 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3226:3236 formulas <> proposition ind
+binder 3222:3222 <> p:46
+R3242:3246 deduction <> :::x_'⊢'_x not
+R3239:3241 stdpp.base <> ::stdpp_scope:'∅' not
+R3247:3249 formulas <> Imp constr
+R3251:3251 deduction <> p:46 var
+R3254:3256 formulas <> Neg constr
+R3259:3261 formulas <> Neg constr
+R3263:3263 deduction <> p:46 var
+R3289:3312 deduction <> implication_introduction constr
+R3289:3312 deduction <> implication_introduction constr
+R3321:3341 deduction <> negation_introduction constr
+R3321:3341 deduction <> negation_introduction constr
+R3350:3369 deduction <> negation_elimination constr
+R3350:3369 deduction <> negation_elimination constr
+R3395:3399 deduction <> axiom constr
+R3395:3399 deduction <> axiom constr
+R3395:3399 deduction <> axiom constr
+def 3428:3430 <> nd6
+R3434:3440 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3456:3457 stdpp.base <> ::type_scope:'forall'_x_'..'_x_','_x not
+R3445:3455 formulas <> proposition ind
+binder 3441:3441 <> p:47
+R3461:3465 deduction <> :::x_'⊢'_x not
+R3458:3460 stdpp.base <> ::stdpp_scope:'∅' not
+R3466:3467 formulas <> Or constr
+R3469:3469 deduction <> p:47 var
+R3472:3474 formulas <> Neg constr
+R3476:3476 deduction <> p:47 var
+R3501:3503 deduction <> RAA constr
+R3501:3503 deduction <> RAA constr
+R3512:3531 deduction <> negation_elimination constr
+R3512:3531 deduction <> negation_elimination constr
+R3542:3543 formulas <> Or constr
+R3548:3550 formulas <> Neg constr
+R3542:3543 formulas <> Or constr
+R3548:3550 formulas <> Neg constr
+R3572:3592 deduction <> or_introduction_right constr
+R3572:3592 deduction <> or_introduction_right constr
+R3601:3621 deduction <> negation_introduction constr
+R3601:3621 deduction <> negation_introduction constr
+R3630:3652 deduction <> implication_elimination constr
+R3630:3652 deduction <> implication_elimination constr
+R3663:3664 formulas <> Or constr
+R3669:3671 formulas <> Neg constr
+R3663:3664 formulas <> Or constr
+R3669:3671 formulas <> Neg constr
+R3695:3714 deduction <> or_introduction_left constr
+R3695:3714 deduction <> or_introduction_left constr
+R3723:3727 deduction <> axiom constr
+R3723:3727 deduction <> axiom constr
+R3752:3775 deduction <> implication_introduction constr
+R3752:3775 deduction <> implication_introduction constr
+R3784:3803 deduction <> negation_elimination constr
+R3784:3803 deduction <> negation_elimination constr
+R3816:3817 formulas <> Or constr
+R3822:3824 formulas <> Neg constr
+R3816:3817 formulas <> Or constr
+R3822:3824 formulas <> Neg constr
+R3844:3848 deduction <> axiom constr
+R3844:3848 deduction <> axiom constr
+R3844:3848 deduction <> axiom constr
+R3872:3876 deduction <> axiom constr
+R3872:3876 deduction <> axiom constr
+prf 3936:3954 <> proof_is_transitive
+R3962:3965 stdpp.gmap <> gset def
+R3967:3977 formulas <> proposition ind
+binder 3957:3958 <> Γ:48
+R3987:3997 formulas <> proposition ind
+binder 3981:3981 <> p:49
+binder 3983:3983 <> q:50
+R4012:4015 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4006:4010 deduction <> :::x_'⊢'_x not
+R4004:4005 deduction <> Γ:48 var
+R4011:4011 deduction <> p:49 var
+R4027:4030 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4021:4025 deduction <> :::x_'⊢'_x not
+R4016:4017 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4019:4020 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4018:4018 deduction <> p:49 var
+R4026:4026 deduction <> q:50 var
+R4033:4037 deduction <> :::x_'⊢'_x not
+R4031:4032 deduction <> Γ:48 var
+R4038:4038 deduction <> q:50 var
+prf 4094:4110 <> deduction_theorem
+R4118:4121 stdpp.gmap <> gset def
+R4123:4133 formulas <> proposition ind
+binder 4113:4114 <> Γ:51
+R4143:4153 formulas <> proposition ind
+binder 4137:4137 <> A:52
+binder 4139:4139 <> B:53
+R4159:4159 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R4180:4185 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R4160:4160 deduction <> :::x_'⊢'_x not
+R4173:4178 deduction <> :::x_'⊢'_x not
+R4163:4167 stdpp.base <> ::stdpp_scope:x_'∪'_x not
+R4161:4162 deduction <> Γ:51 var
+R4168:4169 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4171:4172 stdpp.base <> ::stdpp_scope:'{['_x_']}' not
+R4170:4170 deduction <> A:52 var
+R4179:4179 deduction <> B:53 var
+R4188:4192 deduction <> :::x_'⊢'_x not
+R4186:4187 deduction <> Γ:51 var
+R4193:4195 formulas <> Imp constr
+R4197:4197 deduction <> A:52 var
+R4199:4199 deduction <> B:53 var
+prf 4284:4293 <> soundness1
+R4301:4304 stdpp.gmap <> gset def
+R4306:4316 formulas <> proposition ind
+binder 4296:4297 <> Γ:54
+R4324:4334 formulas <> proposition ind
+binder 4320:4320 <> p:55
+R4349:4352 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4343:4347 deduction <> :::x_'⊢'_x not
+R4341:4342 deduction <> Γ:54 var
+R4348:4348 deduction <> p:55 var
+R4355:4362 evaluation <> :::x_'⊨₃'_x not
+R4353:4354 deduction <> Γ:54 var
+R4363:4363 deduction <> p:55 var
+R4380:4385 evaluation <> model3 def
+R4395:4400 evaluation <> model2 def
+R4410:4415 evaluation <> model1 def
+prf 4445:4454 <> soundness2
+R4461:4471 formulas <> proposition ind
+binder 4457:4457 <> p:56
+R4487:4490 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4481:4485 deduction <> :::x_'⊢'_x not
+R4478:4480 stdpp.base <> ::stdpp_scope:'∅' not
+R4486:4486 deduction <> p:56 var
+R4491:4497 evaluation <> :::'⊨₀'_x not
+R4498:4498 deduction <> p:56 var
+R4515:4518 evaluation <> taut def
+R4528:4533 evaluation <> model1 def
+R4550:4559 deduction <> soundness1 prfax
+R4550:4559 deduction <> soundness1 prfax
+R4574:4579 evaluation <> model3 def
+R4594:4599 evaluation <> model2 def
+R4614:4619 evaluation <> model1 def

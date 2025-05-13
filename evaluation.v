@@ -22,6 +22,7 @@ Definition implb (b1 b2 : bool) : bool :=
 Fixpoint interpret : eval_fun -> (proposition -> bool) :=
   fun e p => match p with
   | Bot => false
+  | Top => true
   | Atom n => e n
   | And p1 p2 => andb (interpret e p1) (interpret e p2)
   | Or p1 p2 => orb (interpret e p1) (interpret e p2)
@@ -49,6 +50,7 @@ forall p:proposition, forall e1 e2:eval_fun, (forall n : nat , e1 n = e2 n) -> i
 Proof.
 intros.
 induction p.
+-reflexivity.
 -reflexivity.
 -simpl. apply H.
 -simpl. rewrite IHp1. rewrite IHp2. reflexivity.
@@ -164,3 +166,23 @@ unfold taut.
 intros. unfold model1. simpl. destruct (interpret I p) eqn:h1.
 simpl. reflexivity. simpl. reflexivity.
 Qed.
+
+
+Example always_true (p : proposition) : Top ≡₂ Imp p p.
+Proof.
+unfold equivalence2. intros.
+split.
+-intro. simpl. destruct (interpret I p) eqn:m.
+reflexivity. reflexivity.
+-intro. reflexivity.
+Qed.
+
+Example always_false (p : proposition) : Bot ≡₂ Neg (Imp p p).
+Proof.
+unfold equivalence2. split.
+-simpl. intro. inversion H.
+-simpl. destruct (interpret I p) eqn:m.
+simpl. intro. assumption. simpl. intro. assumption.
+Qed.
+
+

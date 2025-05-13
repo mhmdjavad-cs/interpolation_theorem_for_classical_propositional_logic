@@ -11,6 +11,7 @@ Require Import substitution.
 Fixpoint proposition_symbols (p : proposition) : gset nat :=
   match p with
   | Bot => ∅
+  | Top => ∅
   | Atom n => {[n]}
   | And p1 p2 => (proposition_symbols p1) ∪ (proposition_symbols p2)
   | Or p1 p2 => (proposition_symbols p1) ∪ (proposition_symbols p2)
@@ -36,6 +37,7 @@ Lemma only_atoms_in_formula_matter :
 Proof.
 intros.
 induction p.
+-reflexivity.
 -reflexivity.
 -simpl. specialize H with (x := n). simpl in H. apply H. set_solver.
 -simpl. simpl in H.
