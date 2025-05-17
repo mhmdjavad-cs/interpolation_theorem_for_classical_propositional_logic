@@ -98,43 +98,52 @@ Qed.
 Ltac in_context :=
   intros; apply axiom; set_solver.
 
+Hint Constructors natural_deduction : core.
+Hint Extern 1 (_ ⊢ _) => in_context : core.
+
+
 Example nd1' : forall p : prop , {[p]} ⊢ p.
+Proof with in_context.
+intro...
+Qed.
+
+Example nd1'' : forall p : prop , {[p]} ⊢ p.
 Proof.
-in_context.
+auto.
 Qed.
 
 
 Example nd2 : forall p q : prop, {[And p q]} ⊢ p.
-Proof.
-intros. apply and_elim_left with (q := q).
-in_context.
+Proof with auto.
+intros.
+apply and_elim_left with (q := q)...
 Qed.
 
 Example nd3 : forall p q : prop, {[p ; q]} ⊢ (And p q).
-Proof.
-intros. apply and_intro. split; apply axiom ; set_solver.
+Proof with auto.
+intros. apply and_intro. split...
 Qed.
 
 Example nd4 : forall p q : prop, {[p ; Neg p]} ⊢ q.
-Proof.
+Proof with auto.
 intros.
 apply bot_elim. apply neg_elim with (p := p).
-split ; apply axiom ; set_solver.
+split...
 Qed.
 
 Example nd5 : forall p : prop, ∅ ⊢ Imp p (Neg (Neg p)).
-Proof.
+Proof with auto.
 intros. apply imp_intro. apply neg_intro.
-apply neg_elim with (p := p). split; apply axiom; set_solver.
+apply neg_elim with (p := p). split...
 Qed.
 
 Example nd6 : forall p : prop, ∅ ⊢ Or p (Neg p).
-Proof.
+Proof with auto.
 intros. apply RAA. apply neg_elim with (p := Or p (Neg p)). split.
 - apply or_intro_right. apply neg_intro.
 apply imp_elim with (q := Or p (Neg p)). split.
   + apply or_intro_left. in_context.
-  + apply imp_intro. apply neg_elim with ( p := Or p (Neg p)). split; apply axiom ; set_solver.
+  + apply imp_intro. apply neg_elim with ( p := Or p (Neg p)). split...
 - in_context.
 Qed.
 
