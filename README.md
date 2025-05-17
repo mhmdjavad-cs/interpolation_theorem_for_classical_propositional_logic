@@ -1,7 +1,22 @@
 # interpolation_theorem_for_classical_propositional_logic
 
 
-Theorem. Let A and B be formulas of P , such that (1) they share at least one propositional symbol in com- mon, and (2) îP A ⊃ B. For any two such formulas of P, there exists a formula C (called the P-interpolant of the formulas A and B) such that (3) îP A ⊃ C, (4) îP C ⊃ B, and (5) C contains only propositional symbols that occur in both A and B (i.e., only propositional symbols shared by A and B).
+Theorem. Let A and B be formulas of classical propositional logic , such that:
+
+(* the interpolation condition *)
+(i) they share at least one propositional symbol in common.
+(ii) A -> B.
+
+For any two such formulas of P,
+
+(* the interpolation statement *)
+there exists a formula C (called the P-interpolant of the formulas A and B) such that:
+
+(iii) A -> C.
+(iv) C -> B.
+(v) C contains only propositional symbols that occur in both A and B (i.e., only propositional symbols shared by A and B).
+
+
 
 
 ------------
@@ -29,4 +44,3 @@ defines natural deduction system for classical propositional logic and also have
 
 ** interpolation.v **
 is where the interpolation theorem is implemented using all the stuff that we defined and prove before.
-
