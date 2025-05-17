@@ -16,7 +16,7 @@ Require Import deduction.
 (* a theorem for help *)
 
 
-Theorem substitution_by_top (A : proposition) (p : nat) :
+Theorem substitution_by_top (A : prop) (p : nat) :
   forall I : eval_fun,
     (I p = true) ->
     ( (interpret I A = true) <-> (interpret I (substitution p A Top) = true)).
@@ -102,7 +102,7 @@ induction A.
 Qed.
 
 
-Theorem substitution_by_bot (A : proposition) (p : nat) :
+Theorem substitution_by_bot (A : prop) (p : nat) :
   forall I : eval_fun,
     (I p = false) ->
     ( (interpret I A = true) <-> (interpret I (substitution p A Bot) = true)).
@@ -196,13 +196,13 @@ Qed.
 interpolation theorem for the propositional logic!
 *)
 
-Definition interpolation_condition (A B : proposition) :=
+Definition interpolation_condition (A B : prop) :=
   (∃ q : nat, q ∈ ps( A ) ∧ q ∈ ps( B )) ∧ (⊨₀ Imp A B).
 
-Definition interpolation_statement (A B : proposition) :=
-  ∃ C : proposition , (⊨₀ Imp A C) ∧ (⊨₀ Imp C B) ∧ ( ps( C ) ⊆ ps( A ) ∪ ps( B )).
+Definition interpolation_statement (A B : prop) :=
+  ∃ C : prop , (⊨₀ Imp A C) ∧ (⊨₀ Imp C B) ∧ ( ps( C ) ⊆ ps( A ) ∪ ps( B )).
 
-Lemma induction_on_X (A B : proposition) :
+Lemma induction_on_X (A B : prop) :
   interpolation_condition A B
 ->
   (
@@ -211,12 +211,12 @@ Lemma induction_on_X (A B : proposition) :
 ->
   (
     (
-      forall A'' : proposition,
+      forall A'' : prop,
       ps(A'') = ps(A) -> interpolation_statement A'' B
     )
     ->
     (
-      forall A' : proposition,
+      forall A' : prop,
       (∃ m:nat, ps(A') = ps(A) ∪ {[m]}) -> interpolation_statement A' B
     )
   )
@@ -226,7 +226,7 @@ Proof.
 Admitted.
 
 
-Theorem interpolation_theorem (A B : proposition) :
+Theorem interpolation_theorem (A B : prop) :
 interpolation_condition A B -> interpolation_statement A B.
 Proof.
 intros.
@@ -256,7 +256,7 @@ unfold interpolation_statement. exists A₃. split.
 + unfold A₃. unfold A₁. unfold A₂. unfold taut. unfold model1. simpl. intro.
   (* getting interpret I A' as an assumption *)
   destruct (interpret I A') eqn:I_A'_state.
-  ++simpl. Search (_ || _ ). apply orb_true_iff.
+  ++simpl. apply orb_true_iff.
       (* destructing p and proving the statement based on the state of p *)
       destruct (I p) eqn:p_state.
       -- left. apply substitution_by_equivalence_props with (p:=Top).
@@ -266,8 +266,18 @@ unfold interpolation_statement. exists A₃. split.
   ++reflexivity.
 
 
++(* first goal is accomplished, two goals left. *) split.
+
+(* now we need to prove that A₃ -> B *)
+--unfold taut in H2. unfold model1 in H2.
+  assert (A1_imp_B : ⊨₀ Imp A₁ B).
+  {
+    unfold A₁. unfold taut. unfold model1.
+  }
+  apply implication_is_transitive with (B := A).
+  ++apply soundness2. unfold A₃.
+  apply imp_intro.
 
 
 
-
-Qed.
+Admitted.

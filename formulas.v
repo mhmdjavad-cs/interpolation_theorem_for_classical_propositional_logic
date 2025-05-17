@@ -3,17 +3,17 @@ From stdpp Require Import base.
 From stdpp Require Import countable strings.
 
 
-Inductive proposition : Type :=
+Inductive prop : Type :=
   | Bot
   | Top
   | Atom  (n : nat)
-  | And   (p1 p2 : proposition)
-  | Or    (p1 p2 : proposition)
-  | Imp   (p1 p2 : proposition)
-  | Neg   (p1 : proposition).
+  | And   (p1 p2 : prop)
+  | Or    (p1 p2 : prop)
+  | Imp   (p1 p2 : prop)
+  | Neg   (p1 : prop).
 
 
-Fixpoint level (p : proposition) : nat :=
+Fixpoint level (p : prop) : nat :=
   match p with
   | Bot => 0
   | Top => 0
@@ -28,8 +28,8 @@ Fixpoint level (p : proposition) : nat :=
   end.
 
 
-Theorem induction_on_level (q : proposition -> Prop) :
-  ( forall (A : proposition) , (forall B : proposition, (level B < level A) -> (q B)) -> (q A) ) -> (forall C : proposition , q C) .
+Theorem induction_on_level (q : prop -> Prop) :
+  ( forall (A : prop) , (forall B : prop, (level B < level A) -> (q B)) -> (q A) ) -> (forall C : prop , q C) .
 Proof.
 Admitted.
 
@@ -38,7 +38,7 @@ Admitted.
 Instance EqDecision_proposition : EqDecision proposition := proposition_eq.
  *)
 
-Global Instance proposition_eq_dec : EqDecision proposition.
+Global Instance proposition_eq_dec : EqDecision prop.
 Proof.
 unfold EqDecision.
 unfold Decision.
@@ -131,13 +131,16 @@ Qed.
 
 
 
-Global Instance proposition_count : Countable proposition.
+Global Instance proposition_count : Countable prop.
 Proof.
 Admitted.
 
 
 
-Fixpoint sub_expression (p : proposition) : gset proposition :=
+Definition context := gset prop.
+
+
+Fixpoint sub_expression (p : prop) : context :=
   match p with
   | Bot => {[Bot]}
   | Top => {[Top]}

@@ -5,7 +5,6 @@ From stdpp Require Import countable strings.
 
 Require Import formulas.
 
-
 (*
 evaluation and interpretation functions,
 evaluation assigns a truth value to the atoms,
@@ -19,7 +18,7 @@ Definition myeval : eval_fun :=  fun x : nat => true.
 Definition implb (b1 b2 : bool) : bool :=
   if b1 then b2 else true.
 
-Fixpoint interpret : eval_fun -> (proposition -> bool) :=
+Fixpoint interpret : eval_fun -> (prop -> bool) :=
   fun e p => match p with
   | Bot => false
   | Top => true
@@ -31,7 +30,8 @@ Fixpoint interpret : eval_fun -> (proposition -> bool) :=
   end.
 
 
-Lemma either_true_or_false (I : eval_fun) (p : proposition) :
+
+Lemma either_true_or_false (I : eval_fun) (p : prop) :
   {(interpret I p) = true} + {(interpret I p) = false}.
 Proof.
 destruct (interpret I p).
@@ -39,14 +39,14 @@ destruct (interpret I p).
 -right. reflexivity.
 Qed.
 
-Lemma interpret_and (I : eval_fun) (p1 p2 : proposition):
+Lemma interpret_and (I : eval_fun) (p1 p2 : prop):
   interpret I (And p1 p2) = true <-> (interpret I p1) ∧ (interpret I p2).
 Proof.
 Admitted.
 
 
 Theorem only_atoms_matter :
-forall p:proposition, forall e1 e2:eval_fun, (forall n : nat , e1 n = e2 n) -> interpret e1 p = interpret e2 p.
+forall p:prop, forall e1 e2:eval_fun, (forall n : nat , e1 n = e2 n) -> interpret e1 p = interpret e2 p.
 Proof.
 intros.
 induction p.
@@ -60,7 +60,7 @@ induction p.
 Qed.
 
 
-Definition model1 (I: eval_fun) (p : proposition) := interpret I p = true.
+Definition model1 (I: eval_fun) (p : prop) := interpret I p = true.
 Notation "I ⊨₁ p" := (model1 I p) (at level 50).
 
 
@@ -70,11 +70,11 @@ unfold model1. simpl. unfold myeval. reflexivity.
 Qed.
 
 
-Definition model2 (I: eval_fun) (Γ : gset proposition) :=
-  forall p:proposition, p ∈ Γ -> I ⊨₁ p.
+Definition model2 (I: eval_fun) (Γ : context) :=
+  forall p:prop, p ∈ Γ -> I ⊨₁ p.
 Notation "I ⊨₂ Γ" := (model2 I Γ) (at level 50).
 
-Definition model3 (Γ : gset proposition) (p : proposition) :=
+Definition model3 (Γ : context) (p : prop) :=
   forall I:eval_fun , I ⊨₂ Γ -> I ⊨₁ p.
 Notation "Γ ⊨₃ p" := (model3 Γ p) (at level 50).
 
@@ -87,7 +87,7 @@ Qed.
 
 
 Example model3_example2 :
-  forall A B : proposition, {[A; Imp A B]} ⊨₃ B.
+  forall A B : prop, {[A; Imp A B]} ⊨₃ B.
 Proof.
 intros. unfold model3. unfold model2. unfold model1. intros.
 destruct (interpret I B) eqn:h1. reflexivity.
@@ -109,18 +109,18 @@ Qed.
 
 
 
-Definition taut (p : proposition) := forall I:eval_fun , I ⊨₁ p.
+Definition taut (p : prop) := forall I:eval_fun , I ⊨₁ p.
 Notation "⊨₀ p" := (taut p) (at level 49).
 
-Definition equivalence (p q : proposition) := ⊨₀ And (Imp p q) (Imp q p).
+Definition equivalence (p q : prop) := ⊨₀ And (Imp p q) (Imp q p).
 Notation "A ≡ B" := (equivalence A B) (at level 70).
 
-Definition equivalence2 (p q : proposition) :=
+Definition equivalence2 (p q : prop) :=
   forall I : eval_fun, interpret I p = true <-> interpret I q = true.
 Notation "A ≡₂ B" := (equivalence2 A B) (at level 70).
 
 
-Lemma equive_eq (A B : proposition): (A ≡ B) <-> (A ≡₂ B).
+Lemma equive_eq (A B : prop): (A ≡ B) <-> (A ≡₂ B).
 Proof.
 unfold equivalence. unfold equivalence2. unfold taut. unfold model1.
 split.
@@ -152,7 +152,7 @@ Qed.
 
 
 Example taut3 :
-  forall p : proposition, ⊨₀ Or (Neg p) (p).
+  forall p : prop, ⊨₀ Or (Neg p) (p).
 Proof.
 unfold taut.
 intros. unfold model1. simpl. destruct (interpret I p) eqn:h1.
@@ -160,7 +160,7 @@ simpl. reflexivity. simpl. reflexivity.
 Qed.
 
 Example taut4 :
-  forall p : proposition, ⊨₀ Imp p p.
+  forall p : prop, ⊨₀ Imp p p.
 Proof.
 unfold taut.
 intros. unfold model1. simpl. destruct (interpret I p) eqn:h1.
@@ -168,7 +168,7 @@ simpl. reflexivity. simpl. reflexivity.
 Qed.
 
 
-Example always_true (p : proposition) : Top ≡₂ Imp p p.
+Example always_true (p : prop) : Top ≡₂ Imp p p.
 Proof.
 unfold equivalence2. intros.
 split.
@@ -177,12 +177,10 @@ reflexivity. reflexivity.
 -intro. reflexivity.
 Qed.
 
-Example always_false (p : proposition) : Bot ≡₂ Neg (Imp p p).
+Example always_false (p : prop) : Bot ≡₂ Neg (Imp p p).
 Proof.
 unfold equivalence2. split.
 -simpl. intro. inversion H.
 -simpl. destruct (interpret I p) eqn:m.
 simpl. intro. assumption. simpl. intro. assumption.
 Qed.
-
-

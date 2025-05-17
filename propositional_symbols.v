@@ -8,7 +8,7 @@ Require Import evaluation.
 Require Import substitution.
 
 
-Fixpoint proposition_symbols (p : proposition) : gset nat :=
+Fixpoint proposition_symbols (p : prop) : gset nat :=
   match p with
   | Bot => ∅
   | Top => ∅
@@ -32,7 +32,7 @@ Qed.
 
 
 Lemma only_atoms_in_formula_matter :
-  forall (p : proposition) (e1 e2 : eval_fun),
+  forall (p : prop) (e1 e2 : eval_fun),
     (forall x:nat , x ∈ ps(p) -> e1 x = e2 x) -> interpret e1 p = interpret e2 p.
 Proof.
 intros.

@@ -7,7 +7,7 @@ Require Import formulas.
 Require Import evaluation.
 
 
-Fixpoint substitution (n : nat) (A B : proposition) : proposition :=
+Fixpoint substitution (n : nat) (A B : prop) : prop :=
   match A with
   | Bot       => Bot
   | Top       => Top
@@ -18,7 +18,7 @@ Fixpoint substitution (n : nat) (A B : proposition) : proposition :=
   | Neg P1    => Neg (substitution n P1 B)
   end.
 
-Example sub1 : forall (n : nat) (p q A : proposition),
+Example sub1 : forall (n : nat) (p q A : prop),
   p ≡ q -> substitution n A p ≡ substitution n A q.
 Proof.
 intros. apply equive_eq in H. apply equive_eq.
@@ -44,7 +44,7 @@ Admitted.
 
 
 
-Example sub2 : forall (p q:nat) (A : proposition),
+Example sub2 : forall (p q:nat) (A : prop),
     {[Atom p]} ⊨₃ A <-> ⊨₀ (substitution p A (Imp (Atom q) (Atom q)) ).
 Proof.
 intros.
@@ -55,7 +55,7 @@ Admitted.
 
 
 Theorem substitution_tautology :
-  forall (n:nat) (A B : proposition), ⊨₀ A -> ⊨₀ substitution n A B.
+  forall (n:nat) (A B : prop), ⊨₀ A -> ⊨₀ substitution n A B.
 Proof.
 unfold taut. unfold model1. intros. simpl.
 induction A.
@@ -72,7 +72,7 @@ Admitted.
 
 
 
-Theorem substitution_by_equivalence_props (p q A : proposition) (I : eval_fun) (x : nat):
+Theorem substitution_by_equivalence_props (p q A : prop) (I : eval_fun) (x : nat):
   (p ≡₂ q) ->
   (interpret I (substitution x A p) = true) ->
   (interpret I (substitution x A q) = true).
