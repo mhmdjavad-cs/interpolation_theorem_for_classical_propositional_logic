@@ -13,181 +13,15 @@ Require Import deduction.
 
 
 
-(* a theorem for help *)
-
-
-Theorem substitution_by_top (A : prop) (p : nat) :
-  forall I : eval_fun,
-    (I p = true) ->
-    ( (interpret I A = true) <-> (interpret I (substitution p A Top) = true)).
+Theorem validity_preserving1 (A B : prop) (n : nat):
+  ⊨₀ Imp A B -> ⊨₀ Imp (substitution n A Top) B.
 Proof.
-intros.
-induction A.
--simpl. reflexivity.
--simpl. reflexivity.
--simpl. destruct (n =? p) eqn:h1.
-  +simpl. split. reflexivity. intro. apply Nat.eqb_eq in h1. rewrite h1. assumption.
-  +simpl. reflexivity.
--simpl. destruct (interpret I A1, interpret I A2) as [ [|] [|] ] eqn:h1.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. apply IHA2 in H0. rewrite H0. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. assert (H3 : interpret I (substitution p A2 Top) = false).
-  { destruct (interpret I (substitution p A2 Top)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA2 in H0.
-  assert (H3 : interpret I (substitution p A1 Top) = false).
-  { destruct (interpret I (substitution p A1 Top)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H0. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  assert (H3 : interpret I (substitution p A1 Top) = false).
-  { destruct (interpret I (substitution p A1 Top)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  assert (H4 : interpret I (substitution p A2 Top) = false).
-  { destruct (interpret I (substitution p A2 Top)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H4. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H4. reflexivity.
--simpl. destruct (interpret I A1, interpret I A2) as [ [|] [|] ] eqn:h1.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. apply IHA2 in H0. rewrite H0. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. assert (H3 : interpret I (substitution p A2 Top) = false).
-  { destruct (interpret I (substitution p A2 Top)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA2 in H0.
-  assert (H3 : interpret I (substitution p A1 Top) = false).
-  { destruct (interpret I (substitution p A1 Top)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H0. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  assert (H3 : interpret I (substitution p A1 Top) = false).
-  { destruct (interpret I (substitution p A1 Top)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  assert (H4 : interpret I (substitution p A2 Top) = false).
-  { destruct (interpret I (substitution p A2 Top)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H4. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H4. reflexivity.
--simpl. destruct (interpret I A1, interpret I A2) as [ [|] [|] ] eqn:h1.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. apply IHA2 in H0. rewrite H0. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. assert (H3 : interpret I (substitution p A2 Top) = false).
-  { destruct (interpret I (substitution p A2 Top)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA2 in H0.
-  assert (H3 : interpret I (substitution p A1 Top) = false).
-  { destruct (interpret I (substitution p A1 Top)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H0. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  assert (H3 : interpret I (substitution p A1 Top) = false).
-  { destruct (interpret I (substitution p A1 Top)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  assert (H4 : interpret I (substitution p A2 Top) = false).
-  { destruct (interpret I (substitution p A2 Top)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H4. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H4. reflexivity.
--simpl. destruct (interpret I A) eqn:h1.
-  +destruct IHA. rewrite H0. reflexivity. reflexivity.
-  +assert (H3 : interpret I (substitution p A Top) = false).
-  { destruct (interpret I (substitution p A Top)) eqn:m2. inversion IHA. symmetry. apply H1. reflexivity. reflexivity. }
-  rewrite <- H3. reflexivity.
-Qed.
+Admitted.
 
-
-Theorem substitution_by_bot (A : prop) (p : nat) :
-  forall I : eval_fun,
-    (I p = false) ->
-    ( (interpret I A = true) <-> (interpret I (substitution p A Bot) = true)).
+Theorem validity_preserving2 (A B : prop) (n : nat):
+  ⊨₀ Imp A B -> ⊨₀ Imp (substitution n A Bot) B.
 Proof.
-intros.
-induction A.
--simpl. reflexivity.
--simpl. reflexivity.
--simpl. destruct (n =? p) eqn:h1.
-  +simpl. split. intro. apply Nat.eqb_eq in h1. rewrite <- H. rewrite <- H0. rewrite h1. reflexivity. intro. inversion H0.
-  +simpl. reflexivity.
--simpl. destruct (interpret I A1, interpret I A2) as [ [|] [|] ] eqn:h1.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. apply IHA2 in H0. rewrite H0. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. assert (H3 : interpret I (substitution p A2 Bot) = false).
-  { destruct (interpret I (substitution p A2 Bot)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA2 in H0.
-  assert (H3 : interpret I (substitution p A1 Bot) = false).
-  { destruct (interpret I (substitution p A1 Bot)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H0. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  assert (H3 : interpret I (substitution p A1 Bot) = false).
-  { destruct (interpret I (substitution p A1 Bot)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  assert (H4 : interpret I (substitution p A2 Bot) = false).
-  { destruct (interpret I (substitution p A2 Bot)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H4. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H4. reflexivity.
--simpl. destruct (interpret I A1, interpret I A2) as [ [|] [|] ] eqn:h1.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. apply IHA2 in H0. rewrite H0. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. assert (H3 : interpret I (substitution p A2 Bot) = false).
-  { destruct (interpret I (substitution p A2 Bot)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA2 in H0.
-  assert (H3 : interpret I (substitution p A1 Bot) = false).
-  { destruct (interpret I (substitution p A1 Bot)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H0. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  assert (H3 : interpret I (substitution p A1 Bot) = false).
-  { destruct (interpret I (substitution p A1 Bot)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  assert (H4 : interpret I (substitution p A2 Bot) = false).
-  { destruct (interpret I (substitution p A2 Bot)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H4. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H4. reflexivity.
--simpl. destruct (interpret I A1, interpret I A2) as [ [|] [|] ] eqn:h1.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. apply IHA2 in H0. rewrite H0. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA1 in H1. assert (H3 : interpret I (substitution p A2 Bot) = false).
-  { destruct (interpret I (substitution p A2 Bot)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H1. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  apply IHA2 in H0.
-  assert (H3 : interpret I (substitution p A1 Bot) = false).
-  { destruct (interpret I (substitution p A1 Bot)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H0. reflexivity.
-  +injection h1. intros. rewrite H0. rewrite H1.
-  assert (H3 : interpret I (substitution p A1 Bot) = false).
-  { destruct (interpret I (substitution p A1 Bot)) eqn:m2.
-  rewrite <- H1. destruct IHA1. rewrite <- H3. reflexivity. reflexivity. reflexivity. }
-  assert (H4 : interpret I (substitution p A2 Bot) = false).
-  { destruct (interpret I (substitution p A2 Bot)) eqn:m2.
-  rewrite <- H0. destruct IHA2. rewrite <- H4. reflexivity. reflexivity. reflexivity. }
-  rewrite H3. rewrite H4. reflexivity.
--simpl. destruct (interpret I A) eqn:h1.
-  +destruct IHA. rewrite H0. reflexivity. reflexivity.
-  +assert (H3 : interpret I (substitution p A Bot) = false).
-  { destruct (interpret I (substitution p A Bot)) eqn:m2. inversion IHA. symmetry. apply H1. reflexivity. reflexivity. }
-  rewrite <- H3. reflexivity.
-Qed.
-
-
+Admitted.
 
 
 
@@ -217,7 +51,9 @@ Lemma induction_on_X (A B : prop) :
     ->
     (
       forall A' : prop,
-      (∃ m:nat, ps(A') = ps(A) ∪ {[m]}) -> interpolation_statement A' B
+      (interpolation_condition A' B) ->
+      (∃ m:nat, ps(A') = ps(A) ∪ {[m]}) ->
+      interpolation_statement A' B
     )
   )
 ->
@@ -226,10 +62,18 @@ Proof.
 Admitted.
 
 
+
 Theorem interpolation_theorem (A B : prop) :
 interpolation_condition A B -> interpolation_statement A B.
 Proof.
 intros.
+remember (size (difference (ps(A)) (ps(B)) )) as n eqn:Heqn.
+induction n.
+-unfold interpolation_statement. unfold interpolation_condition in H.
+admit.
+-
+
+
 apply induction_on_X.
 
 (*having the interpolation condition*)
@@ -242,11 +86,11 @@ exists A. split. apply taut4. split. apply H1. set_solver.
 
 (*step case of the induction*)
 -intros. destruct H1 as [p H1]. unfold interpolation_condition in H.
-destruct H. destruct H as [q H]. destruct H.
+destruct H. destruct H as [q H]. destruct H. destruct p.
 
 (*defining three new propositions*)
-set (A₁ := substitution p A' (Imp (Atom q) (Atom q))).
-set (A₂ := substitution p A' (Neg (Imp (Atom q) (Atom q))) ).
+set (A₁ := substitution x A' (Imp (Atom q) (Atom q))).
+set (A₂ := substitution x A' (Neg (Imp (Atom q) (Atom q))) ).
 set (A₃ := Or A₁ A₂).
 
 unfold interpolation_statement. exists A₃. split.
@@ -258,7 +102,7 @@ unfold interpolation_statement. exists A₃. split.
   destruct (interpret I A') eqn:I_A'_state.
   ++simpl. apply orb_true_iff.
       (* destructing p and proving the statement based on the state of p *)
-      destruct (I p) eqn:p_state.
+      destruct (I x) eqn:p_state.
       -- left. apply substitution_by_equivalence_props with (p:=Top).
       apply always_true. apply substitution_by_top. assumption. assumption.
       -- right. apply substitution_by_equivalence_props with (p:=Bot).
@@ -272,12 +116,30 @@ unfold interpolation_statement. exists A₃. split.
 --unfold taut in H2. unfold model1 in H2.
   assert (A1_imp_B : ⊨₀ Imp A₁ B).
   {
-    unfold A₁. unfold taut. unfold model1.
+    unfold A₁.
+    apply implication_by_equvalence_props with (p := substitution x A' Top).
+    -unfold equivalence2. intros. split.
+      +apply substitution_by_equivalence_props. apply equiv1.
+      +apply substitution_by_equivalence_props. apply equiv_symmetry. apply equiv1.
+    -unfold taut. unfold model1. intros. apply validity_preserving1. assumption.
   }
-  apply implication_is_transitive with (B := A).
-  ++apply soundness2. unfold A₃.
-  apply imp_intro.
+  assert (A2_imp_B : ⊨₀ Imp A₂ B).
+  {
+    unfold A₃.
+    apply implication_by_equvalence_props with (p := substitution x A' Bot).
+    -unfold equivalence2. intros. split.
+      +apply substitution_by_equivalence_props. apply equiv2.
+      +apply substitution_by_equivalence_props. apply equiv_symmetry. apply equiv2.
+    -unfold taut. unfold model1. intros. apply validity_preserving2. assumption.
+  }
+  apply completeness2 in A1_imp_B. apply completeness2 in A2_imp_B.
+  unfold A₃. apply soundness2. apply imp_intro. eapply or_elim.
+  instantiate (2:= A₁). instantiate (1:= A₂). in_context.
+  rewrite set_swap; apply weakening. apply deduction_theorem in A1_imp_B.
+  assumption. apply deduction_theorem in A2_imp_B. rewrite set_swap.
+  apply weakening. assumption.
 
-
+(* the last part of the theorem *)
+--
 
 Admitted.

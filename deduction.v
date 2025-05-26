@@ -165,21 +165,19 @@ Qed.
 Theorem proof_is_transitive (Γ : context) (p q : prop) :
   Γ ⊢ p -> {[p]} ⊢ q -> Γ ⊢ q.
 Proof.
-intros.
-inversion H.
--inversion H0.
-  +apply elem_of_singleton in H4. rewrite <- H4 in H1.
-  apply axiom. assumption.
-  +
-  Admitted.
+Admitted.
 
+
+Lemma set_swap (Γ : context) (A B : prop) :
+  (Γ ∪ {[A]} ∪ {[B]}) = (Γ ∪ {[B]} ∪ {[A]}).
+Proof.
+intros. set_solver.
+Qed.
 
 
 Theorem weakening (Γ : context) (A B : prop):
   (Γ ⊢ A) -> (Γ ∪ {[B]} ⊢ A).
 Proof.
-assert (set_swap: forall (Γ : context) (A B : prop) , Γ ∪ {[A]} ∪ {[B]} = Γ ∪ {[B]} ∪ {[A]} ).
-{intros. set_solver. }
 intros.
 induction H.
 -apply axiom. apply elem_of_union_l. apply H.
@@ -274,7 +272,10 @@ Theorem completeness1 (Γ : context) (q : prop) :
 Proof.
 unfold model3. unfold model2. unfold model1.
 intros.
+induction q.
+-simpl in H. eapply neg_elim.
 Admitted.
+
 
 Theorem completeness2 (q : prop) :
   (⊨₀ q) -> (∅ ⊢ q).

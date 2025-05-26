@@ -135,6 +135,12 @@ split.
   +destruct (interpret I B) eqn:h2. inversion H. simpl. apply H1. reflexivity. reflexivity.
 Qed.
 
+Theorem equiv_symmetry (p q: prop):
+  p ≡₂ q -> q ≡₂ p.
+Proof.
+unfold equivalence2. intros.
+rewrite H. reflexivity.
+Qed.
 
 
 Example taut1 : ⊨₀ Imp (Atom 0) (Atom 0).
@@ -148,6 +154,21 @@ Example taut2 : ⊨₀ Or (Neg (Atom 0)) (Atom 0).
 Proof.
 unfold taut.
 intros. unfold model1. simpl. destruct (I 0). simpl. reflexivity. simpl. reflexivity.
+Qed.
+
+Example equiv1 (p : prop) : Top ≡₂ Imp p p.
+Proof.
+unfold equivalence2. intros. split.
+-intro. simpl. destruct (interpret I p) eqn:m ; reflexivity.
+-reflexivity.
+Qed.
+
+Example equiv2 (p : prop) : Bot ≡₂ Neg (Imp p p).
+Proof.
+unfold equivalence2. intros. split.
+-intros. simpl in H. discriminate.
+-intros. simpl. simpl in H. destruct (interpret I p) eqn:m.
+simpl in H. assumption. simpl in H. assumption.
 Qed.
 
 
