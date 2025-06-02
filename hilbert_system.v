@@ -117,6 +117,7 @@ apply h_weak. apply h_imp_distr.
 Qed.
 
 
+
 (*
 it is used in the next theorem
 so you need to prove it later.
@@ -125,6 +126,7 @@ Theorem deduction_theorem_hd (Γ : context) (A B : prop):
   Γ ∪ {[A]} ⊢ₕ B <-> Γ ⊢ₕ Imp A B.
 Proof.
 Admitted.
+
 
 
 Theorem nd_eq_hd (Γ : context) (p : prop) :
@@ -190,6 +192,3 @@ split.
   +apply top_intro.
   +apply imp_elim with (q := A). assumption. assumption.
 Qed.
-
-
-

@@ -198,6 +198,21 @@ rewrite set_swap. assumption.
 Qed.
 
 
+Theorem deduction_theorem_semantical (Γ : context) (A B : prop):
+  ( (Γ ∪ {[A]}) ⊨₃ B ) -> (Γ ⊨₃ Imp A B).
+Proof.
+unfold model3. unfold model2. unfold model1.
+intros.
+simpl.
+destruct (interpret I A) eqn:h1.
+-simpl. apply H. intros.
+apply elem_of_union in H1. destruct H1.
+  +apply H0. assumption.
+  +apply elem_of_singleton in H1. rewrite H1. assumption.
+-reflexivity.
+Qed.
+
+
 
 (* deduction theorem *)
 Theorem deduction_theorem (Γ : context) (A B : prop):
@@ -266,26 +281,6 @@ intros. inversion H0.
 Qed.
 
 
-(* completeness theorems for our proof system *)
-Theorem completeness1 (Γ : context) (q : prop) :
-  (Γ ⊨₃ q) -> (Γ ⊢ q).
-Proof.
-unfold model3. unfold model2. unfold model1.
-intros.
-induction q.
--simpl in H. eapply neg_elim.
-Admitted.
-
-
-Theorem completeness2 (q : prop) :
-  (⊨₀ q) -> (∅ ⊢ q).
-Proof.
-unfold taut. unfold model1.
-intros.
-apply completeness1. unfold model3. unfold model2. unfold model1.
-intros. apply H.
-Qed.
-
 
 Lemma union_with_empty (B : prop):
   (∅ : context ) ∪ {[B]} = {[B]}.
@@ -294,18 +289,4 @@ Proof.
 Qed.
 
 
-Example implication_is_transitive (A B C : prop) :
-  (⊨₀ Imp A B) ->
-  (⊨₀ Imp B C) ->
-  (⊨₀ Imp A C).
-Proof.
-intros.
-apply soundness2.
-apply completeness2 in H.
-apply completeness2 in H0.
-apply imp_intro.
-eapply proof_is_transitive.
--apply deduction_theorem in H.
-instantiate (1 := B). assumption.
--apply deduction_theorem in H0. rewrite union_with_empty in H0. assumption.
-Qed.
+
