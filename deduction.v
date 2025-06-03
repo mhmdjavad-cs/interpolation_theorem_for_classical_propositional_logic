@@ -144,13 +144,13 @@ intros.
 apply bot_elim. apply neg_elim with (p := p)...
 Qed.
 
-Example nd5 : forall p : prop, ∅ ⊢ Imp p (Neg (Neg p)).
+Example nd5 (Γ : context) (p : prop) : Γ ⊢ Imp p (Neg (Neg p)).
 Proof with auto.
 intros. apply imp_intro. apply neg_intro.
 apply neg_elim with (p := p)...
 Qed.
 
-Example nd6 : forall p : prop, ∅ ⊢ Or p (Neg p).
+Example nd6 (Γ : context) (p : prop) : Γ ⊢ Or p (Neg p).
 Proof with auto.
 intros. apply RAA. apply neg_elim with (p := Or p (Neg p)).
 - apply or_intro_right. apply neg_intro.
@@ -196,6 +196,11 @@ rewrite set_swap. assumption.
 -apply bot_elim. assumption.
 -apply top_intro.
 Qed.
+
+
+
+
+
 
 
 Theorem deduction_theorem_semantical (Γ : context) (A B : prop):
@@ -288,5 +293,8 @@ Proof.
   set_solver.
 Qed.
 
-
-
+Lemma union_with_empty2 (Γ : context):
+  Γ ∪ ∅ = Γ.
+Proof.
+set_solver.
+Qed.
